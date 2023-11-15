@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recogida de datos personales</title>
+</head>
+
+<body>
+    <h1>Recogida de datos personales</h1>
+    <form method="post" action="http://localhost:8080/view-form/post">
+        <p>
+            <label for="nombre">Nombre: </label>
+            <input type="text" name="nombre" id="nombre">
+        </p>
+        <p>
+            <label for="apellidos">Apellidos: </label>
+            <input type="text" name="apellidos" id="apellidos">
+        </p>
+        <p>
+            <label for="comentarios">Comentarios:</label>
+            <textarea name="comentarios" id="comentarios" ></textarea>
+        </p>
+
+        <p>
+            <label for="modulo">Módulo: </label>
+            <select name="modulo" id="modulo" size="5" multiple>
+                <option value="LLMM">Lenguajes de marcas</option>
+                <option value="PRG">Programación</option>
+                <option value="SI">Sistemas informáticos</option>
+            </select>
+        </p>
+
+        <button type="submit">Aceptar</button>
+    </form>
+
+</body>
+
+</html>

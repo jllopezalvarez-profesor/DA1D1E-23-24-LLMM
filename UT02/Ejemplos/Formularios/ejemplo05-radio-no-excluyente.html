@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de radio buttons no excluyentes</title>
+</head>
+
+<body>
+    <h1>Ejemplo de radio buttons no excluyentes</h1>
+    <p>
+        En general, con los radio buttons (input type="radio") no se debería hacer esto. No tiene mucho sentido el
+        concepto. En cualquier caso, si se hace, hay que tenr en cuenta:
+    </p>
+    <ul>
+        <li>No se puede desmarcar un radio cuando ya se ha marcado. Para desmarcarlo se elige otro radio si están
+            agrupados, si son opciones ecluyentes.</li>
+        <li>Al seleccionar un radio no se cambia el estado de los demás.</li>
+        <li>Cuando se quiere que el usuario marque o no una opción, se usa un checkbox (input type="checkbox)</li>
+    </ul>
+    <form method="post" action="http://localhost:8080/view-form/post">
+        <p><label><input type="radio" name="opcion1" value="1">Opcion 1</label></p>
+        <p><label><input type="radio" name="opcion2" value="2">Opcion 2</label></p>
+        <p><label><input type="radio" name="opcion3" value="3">Opcion 3</label></p>
+        <button type="submit">Enviar</button>
+    </form>
+    <p>Al tener distintos valores en el atributo "name", no son excluyentes.</p>
+</body>
+
+</html>

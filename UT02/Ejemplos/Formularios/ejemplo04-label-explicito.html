@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de label con asociación expícita</title>
+</head>
+
+<body>
+    <h1>Ejemplo de label con asociación expícita</h1>
+    <form method="post" action="http://localhost:8080/view-form/post">
+        <p><label for="usr">Usuario:</label></p>
+        <p><input type="text" name="usr" id="usr"></p>
+        <p><label for="pwd">Contraseña:</label></p>
+        <p><input type="password" name="pwd" id="pwd"></p>
+        <p>
+            <input type="checkbox" name="remember" id="remember" value="true">
+            <label for="remember">Recordarme</label>
+        </p>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+
+</html>

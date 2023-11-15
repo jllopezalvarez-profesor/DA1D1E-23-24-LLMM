@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de recogida de múltiples valores - Checkbox</title>
+</head>
+
+<body>
+    <h1>Ejemplo de recogida de múltiples valores - Checkbox</h1>
+    <p>Este formulario tiene varios input type="checkbox" para seleccionar colores.</p>
+    <p>El usuario puede elegir varios colores, no sólo uno.</p>
+    <p>Se enviará al servidor múltiples valores para la misma variable "color".</p>
+    <form method="post" action="http://localhost:8080/view-form/post">
+        <p><label><input type="checkbox" name="color" value="B">Blanco</label></p>
+        <p><label><input type="checkbox" name="color" value="A">Azul</label></p>
+        <p><label><input type="checkbox" name="color" value="R">Rojo</label></p>
+        <p><label><input type="checkbox" name="color" value="V">Verde</label></p>
+        <button type="submit">Enviar</button>
+    </form>
+    <p>Aunque tengan el mismo atributo "name" se pueden marcar de forma independiente.</p>
+    <p>Sólo los iput type="radio" se excluyen entre ellos si tienen el mismo nombre.</p>
+</body>
+
+</html>

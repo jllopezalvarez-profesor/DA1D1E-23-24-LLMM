@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de recogida de múltiples valores - Texto</title>
+</head>
+
+<body>
+    <h1>Ejemplo de recogida de múltiples valores - Texto</h1>
+    <p>Aunque se usa fundamentalmente con checkbox, podemos poner el mismo nombre a cualquier input, y así conseguiremos
+        que se envíen múltiples valores para una misma variable.</p>
+    <form method="post" action="http://localhost:8080/view-form/post">
+        <p>Introduce tus colores preferidos</p>
+        <p><label>Color preferido (1/4): <input type="text" name="color"></label></p>
+        <p><label>Color preferido (2/4): <input type="text" name="color"></label></p>
+        <p><label>Color preferido (3/4): <input type="text" name="color"></label></p>
+        <p><label>Color preferido (4/4): <input type="text" name="color"></label></p>
+        <button type="submit">Enviar</button>
+    </form>
+    <p>Aunque tengan el mismo atributo "name" se pueden marcar de forma independiente.</p>
+    <p>Sólo los iput type="radio" se excluyen entre ellos si tienen el mismo nombre.</p>
+</body>
+
+</html>
