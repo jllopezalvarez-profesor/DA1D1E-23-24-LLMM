@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Información de ficheros en formulario</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<h1>Información de formulario</h1>
+<h2>Método de envío</h2>
+<p th:text="${filesFormData.method}"></p>
+<h2>Valores recibidos</h2>
+<table>
+    <thead>
+    <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Valor</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="item:${filesFormData.values}">
+        <td th:text="${item.getKey()}"></td>
+        <td th:text="${item.getValue()}"></td>
+    </tr>
+    </tbody>
+</table>
+<h2>Ficheros recibidos</h2>
+<table>
+    <thead>
+    <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Tamaño</th>
+        <th scope="col">Content type</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="item:${filesFormData.files}">
+        <td th:text="${item.fileName}"></td>
+        <td th:text="${item.fileSize}"></td>
+        <td th:text="${item.contentType}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
