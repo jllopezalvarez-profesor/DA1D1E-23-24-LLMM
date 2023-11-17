@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de formulario con campos ocultos</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejemplo de formulario con campos ocultos</h1>
+    <p>En el siguiente formulario, que simula un formulario para editar los datos personales de una persona, además hay
+        un campo oculto donde está el id de esa persona en una hipotética base de datos.</p>
+    <p>Este tipo de formularios se genera dinámicamente en el servidor, y vienen con valores precargados en los campos,
+        para que el usuario los modifique.</p>
+    <p>Al enviar el formulario, junto a los campos visibles se envía el ID, para que el servidor pueda asociar el
+        nombre, apellidos y fecha de nacimiento con una persona de la base de datos.</p>
+
+    <form method="post" action="http://localhost:8080/view-form/post">
+
+        <input type="hidden" name="personId" value="1232">
+        <p><label>Nombre: <input type="text" name="firstName" value="Ana María"></label></p>
+        <p><label>Apellidos: <input type="text" name="lastName" value="Calamaro López"></label></p>
+        <p><label>Fecha de nacimiento: <input type="date" name="birthDate" value="1995-08-10"></label></p>
+
+        <button type="submit">Guardar cambios</button>
+
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de formulario con campos obligatorios</title>
+    <style>
+        label{display: block;}
+    </style>
+</head>
+
+<body>
+    <h1>Ejemplo de formulario con campos obligatorios</h1>
+    <p>Simula un formulario para presupuesto de compra de un coche, en el que el usuario debe, obligatoriamente,
+        completar los datos personales y el color.</p>
+    <form method="post" action="http://localhost:8080/view-form/post">
+        <fieldset>
+            <legend>Datos del comprador</legend>
+            <p><label>Nombre: <input type="text" name="nombre" required></label></p>
+            <p><label>Apellidos: <input type="text" name="apellidos" required></label></p>
+            <p>
+                <label>País de residencia:
+                    <select name="residencia" required>
+                        <option value=""></option>
+                        <option value="E">España</option>
+                        <option value="F">Francia</option>
+                        <option value="A">Alemania</option>
+                        <option value="P">Portugal</option>
+                    </select>
+                </label>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Color y equipamiento</legend>
+            <fieldset>
+                <legend>Color</legend>
+                <label><input type="radio" name="color" value="B" required> Blanco</label>
+                <label><input type="radio" name="color" value="G"> Gris</label>
+                <label><input type="radio" name="color" value="R"> Rojo</label>
+            </fieldset>
+            <fieldset>
+                <legend>Equipamiento</legend>
+                <label><input type="checkbox" name="equipo" value="LL"> Llantas de aleación</label>
+                <label><input type="checkbox" name="equipo" value="CB"> Climatizador bizona</label>
+                <label><input type="checkbox" name="equipo" value="FX"> Faros Xenon</label>
+            </fieldset>
+        </fieldset>
+        <p>
+            <label><input type="checkbox" name="legal" required> Acepto las condiciones de contratación</label>
+        </p>
+        <p>
+            <button type="submit">Solicitar presupuesto</button>
+        </p>
+    </form>
+</body>
+
+</html>

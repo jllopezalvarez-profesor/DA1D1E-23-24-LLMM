@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de formulario con fieldsets anidados</title>
+</head>
+
+<body>
+    <h1>Ejemplo de formulario con fieldsets anidados</h1>
+    <p>Simula un formulario para presupuesto de compra de un coche.</p>
+    <form method="post" action="http://localhost:8080/view-form/post">
+        <fieldset>
+            <legend>Datos del comprador</legend>
+            <p><label>Nombre: <input type="text" name="nombre"></label></p>
+            <p><label>Apellidos: <input type="text" name="apellidos"></label></p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Color y equipamiento</legend>
+            <fieldset>
+                <legend>Color</legend>
+                <label><input type="radio" name="color" value="B"> Blanco</label>
+                <label><input type="radio" name="color" value="G"> Gris</label>
+                <label><input type="radio" name="color" value="R"> Rojo</label>
+            </fieldset>
+            <fieldset>
+                <legend>Equipamiento</legend>
+                <label><input type="checkbox" name="equipo" value="LL"> Llantas de aleación</label>
+                <label><input type="checkbox" name="equipo" value="CB"> Climatizador bizona</label>
+                <label><input type="checkbox" name="equipo" value="FX"> Faros Xenon</label>
+            </fieldset>
+        </fieldset>
+        <button type="submit">Solicitar presupuesto</button>
+    </form>
+</body>
+
+</html>

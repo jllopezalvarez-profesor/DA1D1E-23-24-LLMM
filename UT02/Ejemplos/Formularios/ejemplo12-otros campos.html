@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de formulario con campos HTML 5</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejemplo de formulario con campos HTML 5</h1>
+    <p>Con HTML 5 se añadieron nuevos tipos de campos, para cubrir necesidades específias, más allá del simple campo de
+        texto.</p>
+    <p>Cada vez tienen más soporte por parte de los navegadores, pero no está de más, cuando vayamos a usarlos, probar
+        con varios navegadores, o como mínimo revisar la informacion en "caniuse", porque a veces el comportamiento de
+        estos campos no es igual en todos los navegadores.</p>
+    <form method="post" action="http://localhost:8080/view-form/post">
+
+        <p><label>Email: <input type="email" name="email"></label></p>
+        <p><label>Email (admite varios separados por comas): <input type="email" name="emailmultiple" multiple></label></p>
+        <p><label>Teléfono: <input type="tel" name="telefono"></label></p>
+        <p><label>Número: <input type="number" name="número"></label></p>
+        <p><label>Slider (range):<input type="range" name="range" min="0" max="1" step="0.1"></label></p>
+        <fieldset>
+            <legend>Campos de fecha / hora</legend>
+            <p><label>Fecha y hora local: <input type="datetime-local" name="datetimelocal"></label></p>
+            <p><label>Fecha: <input type="date" name="date"></label></p>
+            <p><label>Hora: <input type="time" name="time"></label></p>
+            <p><label>Mes (no funciona en Firefox): <input type="month" name="month"></label></p>
+            <p><label>Semana (no funciona en Firefox): <input type="week" name="week"></label></p>
+        </fieldset>
+        <p><label>Color: <input type="color" name="color"></label></p>
+
+
+
+        <p>Los botones también pueden enviar datos a los formularios. Si tienen atributos name y value. Esto puede ser
+            útil si tenemos varios botones que hacen cosas distintas, pero todos envían el formulario. Al enviar junto a
+            los datos el value, se puede identificar el botón que se ha pulsado.</p>
+        <p>
+            <button type="submit" value="boton1" name="enviardatos">Enviar los datos (botón 1)</button>
+            <button type="submit" value="boton2" name="enviardatos">Enviar los datos (botón 1)</button>
+        </p>
+    </form>
+</body>
+
+</html>

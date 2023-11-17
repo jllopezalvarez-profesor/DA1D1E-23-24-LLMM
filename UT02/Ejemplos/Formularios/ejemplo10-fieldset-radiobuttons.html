@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de formulario con radio buttons agrupados</title>
+</head>
+
+<body>
+    <h1>Ejemplo de formulario con radio buttons agrupados</h1>
+    <p>Simula un formulario de registro en el que los radiobuttons están agrupados.</p>
+    <form method="post" action="http://localhost:8080/view-form/post">
+        <p><label>Usuario: <input type="text" name="usr"></label></p>
+        <p><label>Contraseña: <input type="password" name="pwd"></label></p>
+        <p><label>Repetir Contraseña: <input type="password" name="pwd2"></label></p>
+        <fieldset>
+            <legend>¿Cómo nos ha conocido?</legend>
+            <label><input type="radio" name="forma-contacto" value="P"> Prensa</label>
+            <label><input type="radio" name="forma-contacto" value="I"> Internet</label>
+            <label><input type="radio" name="forma-contacto" value="A"> Amigos</label>
+        </fieldset>
+        <button type="submit">Registrarme</button>
+    </form>
+</body>
+
+</html>
