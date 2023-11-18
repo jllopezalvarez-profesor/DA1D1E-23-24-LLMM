@@ -12,6 +12,16 @@
     <form method="post" action="http://localhost:8080/view-form/post">
         <label>Usuario: <input type="text" name="usr"></label>
         <label>Contraseña: <input type="password" name="pwd"></label>
+        <label>Ciudad: <input type="text" name="ciudad" list="cityList"></label>
+        <datalist id="cityList">
+            <option value="Madrid">Madrid</option>
+            <option value="Barcelona">Barcelona</option>
+            <option value="Malaga">Malaga</option>
+            <option value="Marbella">Marbella</option>
+            <option value="Montecarlo">Montecarlo</option>
+            <option value="Bilbao">Bilbao</option>
+        </datalist>
+
         <button type="submit">Enviar</button>
     </form>
 </body>

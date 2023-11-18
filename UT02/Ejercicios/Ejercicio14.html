@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Completa tu pedido</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        ul li {
+            padding: 0 .5em;
+            display: inline-flex;
+        }
+        input[type=text], input[type=tel], textarea{
+            width: 99.3%;
+        }
+
+        textarea{
+            height: 5em;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Completa tu pedido</h1>
+    </header>
+    <main>
+        <form method="post" action="http://localhost:8080/form-view/post">
+            <fieldset>
+                <legend>¿Cómo quieres tu pizza?</legend>
+                <fieldset>
+                    <legend>Tipo de masa</legend>
+                    <ul>
+                        <li><label><input type="radio" name="masa" value="F" required>Fina</label></li>
+                        <li><label><input type="radio" name="masa" value="G">Gruesa</label></li>
+                        <li><label><input type="radio" name="masa" value="Q">Borde relleno de queso</label></li>
+                        <li><label><input type="radio" name="masa" value="SG">Sin gluten</label></li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>Tamaño</legend>
+                    <ul>
+                        <li><label><input type="radio" name="tamanio" value="S" required>Pequeña</label></li>
+                        <li><label><input type="radio" name="tamanio" value="M">Mediana</label></li>
+                        <li><label><input type="radio" name="tamanio" value="L">Grande</label></li>
+                        <li><label><input type="radio" name="tamanio" value="XL">Gigante</label></li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>Pizza base</legend>
+                    <ul>
+                        <li><label><input type="radio" name="base" value="M" required>Margarita</label></li>
+                        <li><label><input type="radio" name="base" value="BBQ">Barbacoa</label></li>
+                        <li><label><input type="radio" name="base" value="4Q">Cuatro quesos</label></li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>Ingredientes adicionales</legend>
+                    <!-- Recuerdo que aunque el validador diga que los chekcboxes no se
+                    pueden llamar igual, no está mal. Es un fallo del validador -->
+                    <ul>
+                        <li><label><input type="checkbox" name="extra" value="IA-PI">Pimiento</label></li>
+                        <li><label><input type="checkbox" name="extra" value="IA-CE">Cebolla</label></li>
+                        <li><label><input type="checkbox" name="extra" value="IA-CP">Carne picada</label></li>
+                        <li><label><input type="checkbox" name="extra" value="IA-PL">Pollo</label></li>
+                        <li><label><input type="checkbox" name="extra" value="IA-BE">Berenjena</label></li>
+                        <li><label><input type="checkbox" name="extra" value="IA-XQ">Extra de queso</label></li>
+                        <li><label><input type="checkbox" name="extra" value="IA-BBQ">Salsa barbacoa</label></li>
+                    </ul>
+                </fieldset>
+            </fieldset>
+            <fieldset>
+                <legend>Entrega</legend>
+                <p><label>Nombre: <input type="text" name="nombre" required></label></p>
+                <p><label>Apellidos: <input type="text" name="apellidos"  required></label></p>
+                <p><label>Dirección completa: <input type="text" name="direccion"  required></label></p>
+                <p><label>Teléfono: <input type="tel" name="telefono" required></label></p>
+                <p><label>Observaciones: <textarea></textarea></label></p>
+            </fieldset>
+            <p>
+                <label>Método de pago
+                    <select name="pago" required>
+                        <option value="">Seleccione un método de pago</option>
+                        <option value="T">Tarjeta bancaria</option>
+                        <option value="B">Bizum</option>
+                        <option value="P">PayPal</option>
+                    </select>
+                </label>
+            </p>
+            <p><button type="submit">Completar pedido</button> <button type="reset">Reiniciar formulario</button></p>
+        </form>
+    </main>
+
+    <footer>
+        Pizzería Clara del Rey
+        <address>C/ Padre Claret, 8. 28002 - Madrid. Tfno. 915195257 </address>
+    </footer>
+</body>
+
+</html>
