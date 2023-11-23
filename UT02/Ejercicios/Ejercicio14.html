@@ -16,15 +16,19 @@
             padding: 0;
             margin: 0;
         }
+
         ul li {
             padding: 0 .5em;
             display: inline-flex;
         }
-        input[type=text], input[type=tel], textarea{
+
+        input[type=text],
+        input[type=tel],
+        textarea {
             width: 99.3%;
         }
 
-        textarea{
+        textarea {
             height: 5em;
         }
     </style>
@@ -82,20 +86,20 @@
             <fieldset>
                 <legend>Entrega</legend>
                 <p><label>Nombre: <input type="text" name="nombre" required></label></p>
-                <p><label>Apellidos: <input type="text" name="apellidos"  required></label></p>
-                <p><label>Dirección completa: <input type="text" name="direccion"  required></label></p>
+                <p><label>Apellidos: <input type="text" name="apellidos" required></label></p>
+                <p><label>Dirección completa: <input type="text" name="direccion" required></label></p>
                 <p><label>Teléfono: <input type="tel" name="telefono" required></label></p>
                 <p><label>Observaciones: <textarea></textarea></label></p>
             </fieldset>
             <p>
-                <label>Método de pago
-                    <select name="pago" required>
-                        <option value="">Seleccione un método de pago</option>
-                        <option value="T">Tarjeta bancaria</option>
-                        <option value="B">Bizum</option>
-                        <option value="P">PayPal</option>
-                    </select>
-                </label>
+                <label for="pago">Método de pago</label>
+                        <select name="pago" id="pago" required>
+                            <option value="">Seleccione un método de pago</option>
+                            <option value="T">Tarjeta bancaria</option>
+                            <option value="B">Bizum</option>
+                            <option value="P">PayPal</option>
+                        </select>
+
             </p>
             <p><button type="submit">Completar pedido</button> <button type="reset">Reiniciar formulario</button></p>
         </form>
