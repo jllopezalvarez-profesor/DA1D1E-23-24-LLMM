@@ -1,0 +1,159 @@
+/* Estilos generales para la página de ejemplos de degradados*/
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 1em;
+    --gradient-example-height: 100px;
+}
+
+section {
+    border: 1px solid black;
+    padding: 1em;
+    margin-bottom: 3em;
+}
+
+h2 {
+    border-bottom: 1px solid black;
+}
+
+pre {
+    margin: 0;
+    font-size: 1.25em;
+    /* white-space: normal; */
+    white-space-collapse: preserve-breaks;
+}
+
+.gradient-example {
+    min-height: var(--gradient-example-height);
+    margin: 0;
+    padding: 1em;
+}
+
+.large-example {
+    min-height: calc(var(--gradient-example-height)*2);
+}
+
+.gradient-example p {
+    margin: 0;
+    padding: .25em;
+}
+
+
+
+/* Estilos específicos para los ejemplos básicos */
+.gradient-basic-01 {
+    background: linear-gradient(red, yellow);
+}
+
+.gradient-basic-02 {
+    background: linear-gradient(to right, red, yellow);
+}
+
+.gradient-basic-03 {
+    background: linear-gradient(to left, red, yellow);
+}
+
+.gradient-basic-04 {
+    background: linear-gradient(to top, red, yellow);
+}
+
+.gradient-basic-05 {
+    background: linear-gradient(to bottom right, red, yellow);
+}
+
+.gradient-basic-06 {
+    background: linear-gradient(225deg, red, yellow);
+}
+
+
+/* Estilos específicos para los ejemplos avanzados */
+.gradient-advanced-01 {
+    background: linear-gradient(to right, red, yellow, green, blue, magenta);
+}
+
+.gradient-advanced-02 {
+    background: linear-gradient(to right, red, yellow 10%, green, blue 90%, magenta);
+}
+
+.gradient-advanced-03 {
+    background: linear-gradient(to right, red -7%, yellow 10%, green, blue 90%, magenta 107%);
+}
+
+.gradient-advanced-04 {
+    background: linear-gradient(to right, red, yellow 25%, green 25%, blue 75%, magenta 75%, black);
+}
+
+.gradient-advanced-05-a {
+    background: linear-gradient(to right, yellow, green);
+}
+
+.gradient-advanced-05-b {
+    background: linear-gradient(to right, yellow, 80%, green);
+}
+
+.gradient-advanced-06-image {
+    padding: 0;
+    background: url(fondo-01.avif);
+}
+
+.gradient-advanced-06-a-transparent {
+    background: linear-gradient(to right, yellow, 80%, transparent);
+}
+
+.gradient-advanced-06-de-transparent {
+    background: linear-gradient(to right, transparent, 20%, yellow);
+}
+
+.gradient-advanced-07 {
+    min-height: calc(var(--gradient-example-height)*4);
+    background:
+        linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%),
+        linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+        linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+}
+
+/* Estilos específicos para los ejemplos de degradados repetitivos */
+.gradient-repeat-01 {
+    background: repeating-linear-gradient(45deg, lime, lime 20px, yellow 20px, yellow 40px);
+}
+
+.gradient-repeat-02 {
+    background: repeating-linear-gradient(45deg, yellow, 20px, lime 40px);
+}
+
+.gradient-repeat-02 {
+    background: repeating-linear-gradient(45deg, yellow, 25px, lime, 50px, yellow 75px);
+}
+
+/* Estilos específicos para los ejemplos de degradados extremos */
+.multi-repeating-linear {
+    min-height: calc(var(--gradient-example-height)*4);
+    background:
+        repeating-linear-gradient(190deg,
+            rgba(255, 0, 0, 0.5) 40px,
+            rgba(255, 153, 0, 0.5) 80px,
+            rgba(255, 255, 0, 0.5) 120px,
+            rgba(0, 255, 0, 0.5) 160px,
+            rgba(0, 0, 255, 0.5) 200px,
+            rgba(75, 0, 130, 0.5) 240px,
+            rgba(238, 130, 238, 0.5) 280px,
+            rgba(255, 0, 0, 0.5) 300px),
+        repeating-linear-gradient(-190deg,
+            rgba(255, 0, 0, 0.5) 30px,
+            rgba(255, 153, 0, 0.5) 60px,
+            rgba(255, 255, 0, 0.5) 90px,
+            rgba(0, 255, 0, 0.5) 120px,
+            rgba(0, 0, 255, 0.5) 150px,
+            rgba(75, 0, 130, 0.5) 180px,
+            rgba(238, 130, 238, 0.5) 210px,
+            rgba(255, 0, 0, 0.5) 230px),
+        repeating-linear-gradient(23deg,
+            red 50px, orange 100px, yellow 150px, green 200px,
+            blue 250px, indigo 300px, violet 350px, red 370px);
+}
+
+.chess-gradient {
+    min-height: calc(var(--gradient-example-height)*4);
+    background:
+        repeating-linear-gradient(0deg, transparent, transparent 30px, rgba(187, 255, 0, 0.5)30px, rgb(187, 255, 0, 0.5) 60px),
+        repeating-linear-gradient(90deg, transparent, transparent 30px, rgb(187, 255, 0, 0.5)30px, rgb(187, 255, 0, 0.5) 60px);
+}

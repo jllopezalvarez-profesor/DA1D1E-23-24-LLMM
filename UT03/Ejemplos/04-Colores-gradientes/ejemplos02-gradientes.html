@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de degradado (degradado) lineal</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/css.min.js"></script>
+    <link rel="stylesheet" href="ejemplos02-gradientes.css">
+</head>
+
+<body>
+    <header>
+        <h1>Ejemplos de degradado lineal</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Degradados básicos</h2>
+
+            <h3>Degradado por defecto entre dos colores</h3>
+            <pre><code class="language-css">background: linear-gradient(red, yellow);</code></pre>
+            <div class="gradient-example gradient-basic-01">
+                <p>
+                    El degradado avanza de arriba hacia abajo.
+                </p>
+            </div>
+
+            <h3>Cambiando el sentido del degradado</h3>
+            <pre><code class="language-css">background: linear-gradient(to right, red, yellow);</code></pre>
+            <div class="gradient-example gradient-basic-02">
+                <p>
+                    El degradado avanza de izquierda a derecha.
+                </p>
+            </div>
+            <pre><code class="language-css">background: linear-gradient(to left, red, yellow);</code></pre>
+            <div class="gradient-example gradient-basic-03">
+                <p>
+                    El degradado avanza de derecha a izquierda.
+                </p>
+            </div>
+            <pre><code class="language-css">background: linear-gradient(to top, red, yellow);</code></pre>
+            <div class="gradient-example gradient-basic-04">
+                <p>
+                    El degradado avanza de abajo hacia arriba.
+                </p>
+            </div>
+
+            <h3>Degradados en diagonal y con ángulos arbitrarios</h3>
+            <pre><code class="language-css">background: linear-gradient(to bottom right, red, yellow);</code></pre>
+            <div class="gradient-example gradient-basic-05">
+                <p>
+                    El degradado avanza de la esquina superior izquierda a la esquina inferior derecha.
+                </p>
+                <p>
+                    Se especifica sólo el destino, el origen es el punto contrario al destino.
+                </p>
+            </div>
+            <pre><code class="language-css">background: linear-gradient(225deg, red, yellow);</code></pre>
+            <div class="gradient-example gradient-basic-06">
+                <p>
+                    El degradado avanza en un ángulo de 225 grados, teniendo en cuenta que:
+                </p>
+                <ul>
+                    <li>0º es de abajo hacia arriba (to top)</li>
+                    <li>90º es de izquierda a derecha (to right)</li>
+                    <li>180º es de arriba hacia abajo (el valor por defecto / to bottom)</li>
+                    <li>270º es de derecha a izquierda (to left)</li>
+                    <li>Se admiten ángulos negativos. Por ejemplo, -90 es igual que 270. Esto puede ser útil para
+                        animaciones.</li>
+                </ul>
+                <p>En este caso, 225 grados es equivalente a "to bottom left"</p>
+            </div>
+        </section>
+        <section>
+            <h2>Degradados avanzados</h2>
+
+            <h3>Usando más de dos colores</h3>
+            <pre><code class="language-css">background: linear-gradient(to right, red, yellow, green, blue, magenta);</code></pre>
+            <div class="gradient-example gradient-advanced-01">
+                <p>
+                    El degradado pasa por los colores establecidos, en este caso cuatro.
+                </p>
+                <p>
+                    Los colores se distribuyen de forma uniforme:
+                </p>
+                <ul>
+                    <li>Rojo al 0% (al principio)</li>
+                    <li>Amarillo al 25%</li>
+                    <li>Verde al 50%</li>
+                    <li>Azul al 75%</li>
+                    <li>Magenta al 100% (al final)</li>
+                </ul>
+            </div>
+
+            <h3>Posicionando los colores</h3>
+            <pre><code class="language-css">background: linear-gradient(to right, red, yellow 10%, green, blue 90%, magenta);</code></pre>
+            <div class="gradient-example gradient-advanced-02">
+                <p>
+                    En este caso hemos "empujado" el amarillo a la izquierda, y el azul a la derecha, dejando más
+                    espacio al verde en el centro.
+                </p>
+                <p>
+                    El valor de posición se puede dar en porcentaje o en píxeles.
+                </p>
+            </div>
+            <pre><code class="language-css">background: linear-gradient(to right, red -7%, yellow 10%, green, blue 90%, magenta 107%);</code></pre>
+            <div class="gradient-example gradient-advanced-03">
+                <p>
+                    Podemos salirnos de la escala (por debajo del 0% y por encima del 100%) si queremos conseguir
+                    ciertos efectos.
+                </p>
+                <p>
+                    En este caso el rojo y el magenta los hemos "empujado" hacia fuera (al -7% y al 107%
+                    respectivamente) para conseguir que no aparezca el color "puro".
+                </p>
+            </div>
+
+            <h3>Creando líneas dúras (no degradadas)</h3>
+            <pre><code class="language-css">background: linear-gradient(to right, red, yellow 25%, green 25%, blue 75%, magenta 75%, black);</code></pre>
+            <div class="gradient-example gradient-advanced-04">
+                <p>
+                    Para que dos colores se "encuentren" sin que haya degradado entre ellos, tenemos que posicionarlos
+                    en el mismo punto del degradado.
+                </p>
+                <p>En este caso, hemos forzado una transición dura entre el amarillo y el verde en el 25% del degradado,
+                    y otra entre el azul y el magenta en el 75%.</p>
+            </div>
+
+            <h3>Posicionando puntos medios (controlando el cambio del color)</h3>
+            <pre><code class="language-css">background: linear-gradient(to right, lime, green); /* por defecto el punto medio al 50%*/</code></pre>
+            <div class="gradient-example gradient-advanced-05-a">
+                <p>
+                    Por defecto el punto medio entre los colores estará en el 50%, como este caso.
+                </p>
+            </div>
+            <pre><code class="language-css">background: linear-gradient(to right, yellow, 80%, green);</code></pre>
+            <div class="gradient-example gradient-advanced-05-b">
+                <p>
+                    Pero se puede "empujar" ese punto medio hacia un lado (o incluso fuera), para dar más relevancia a
+                    uno de los colores.
+                </p>
+            </div>
+
+            <h3>Degradado hacia (o desde) transparecia</h3>
+            <pre><code class="language-css">background: linear-gradient(to right, yellow, 80%, transparent);</code></pre>
+            <div class="gradient-example gradient-advanced-06-image">
+                <div class="gradient-example gradient-advanced-06-a-transparent">
+                    <p>
+                        Se puede degradar hacia transparente, con lo que se revela lo que hay "debajo" del degradado.
+                    </p>
+                    <p>
+                        En este caso tenemos otra capa (div) con una imagen de fondo, para poder mostrar el
+                        efecto del degradado hacia transparente. El punto medio entre el color y la trasparencia se ha
+                        desplazado al 80% para acentuar el efecto.
+                    </p>
+                    <p>La imagen de fondo se ha obtenido de freepik.com.</p>
+                </div>
+            </div>
+            <pre><code class="language-css">background: linear-gradient(to right, transparent, 20%, yellow);</code></pre>
+            <div class="gradient-example gradient-advanced-06-image">
+                <div class="gradient-example gradient-advanced-06-de-transparent">
+                    <p>
+                        En este caso empezamos en transparente y vamos hacia el color sólido.
+                    </p>
+                    <p>La imagen de fondo se ha obtenido de freepik.com.</p>
+                </div>
+            </div>
+            <h3>Degradados superpuestos</h3>
+            <pre><code class="language-css">background:
+            linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%),
+            linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+            linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+            min-height: calc(var(--gradient-example-height)*4);</code></pre>
+            <div class="gradient-example gradient-advanced-07">
+                <p>
+                    Se puede usar canal alfa en los colores de un degradado.
+                </p>
+                <p>
+                    Al hacerlo, se superpondrán colores y se combinarán formado otros colores.
+                </p>
+                <p>Este espacio se ha hecho más alto de forma intencionada, para que se aprecie el efecto. Observesé que
+                    se han usado funciones y variables para hacer el espacio cuatro veces más alto que el resto de
+                    ejemplos.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Degradados repetitivos</h2>
+            <p>Las funciones para degradados (linear-gradient, radial-gradient y conic-gradient) no admiten
+                configuraciones para repetir colores, pero hay funciones repeating-&lt;type&gt;-gradient que nos
+                permiten hacerlo.</p>
+            <p>En estos casos es más facil usar píxeles (en lugar de porcentaje) para posicionar el inicio y el fin.</p>
+
+            <h3>Degradado repetitivo con lineas suaves</h3>
+            <pre><code class="language-css">background: repeating-linear-gradient(45deg, lime, lime 20px, yellow 20px, yellow 40px);</code></pre>
+            <div class="gradient-example gradient-repeat-01">
+                <p>
+                    En este caso se han establecido líneas duras entre los colores (al usar las mismas posiciones para
+                    ciertos colores).
+                </p>
+            </div>
+            <h3>Degradado repetitivo con lineas duras</h3>
+            <pre><code class="language-css">background: repeating-linear-gradient(45deg, yellow, 25px, lime, 50px, yellow 75px);</code></pre>
+            <div class="gradient-example gradient-repeat-02">
+                <p>
+                    En este caso se han establecido puntos concretos para los valores intermedios entre colores.
+                </p>
+            </div>
+        </section>
+        <section>
+            <h2>Ejemplos "extremos"</h2>
+            <p>Estos ejemplos ilustran la capacidad de generar fondos más o menos elaborados sin necesidad de imágenes.
+            </p>
+            <h3>Degradados repetitivos superpuestos, con canales alfa - Fuente: MDN</h3>
+            <pre><code class="language-css">background:
+            repeating-linear-gradient(190deg,
+            rgba(255, 0, 0, 0.5) 40px,
+            rgba(255, 153, 0, 0.5) 80px,
+            rgba(255, 255, 0, 0.5) 120px,
+            rgba(0, 255, 0, 0.5) 160px,
+            rgba(0, 0, 255, 0.5) 200px,
+            rgba(75, 0, 130, 0.5) 240px,
+            rgba(238, 130, 238, 0.5) 280px,
+            rgba(255, 0, 0, 0.5) 300px),
+            repeating-linear-gradient(-190deg,
+            rgba(255, 0, 0, 0.5) 30px,
+            rgba(255, 153, 0, 0.5) 60px,
+            rgba(255, 255, 0, 0.5) 90px,
+            rgba(0, 255, 0, 0.5) 120px,
+            rgba(0, 0, 255, 0.5) 150px,
+            rgba(75, 0, 130, 0.5) 180px,
+            rgba(238, 130, 238, 0.5) 210px,
+            rgba(255, 0, 0, 0.5) 230px),
+            repeating-linear-gradient(23deg,
+            red 50px, orange 100px, yellow 150px, green 200px,
+            blue 250px, indigo 300px, violet 350px, red 370px);</code></pre>
+            <div class="gradient-example multi-repeating-linear"></div>
+
+            <h3>Mantel de cuadros usando canales alfa y degradados repetitivos</h3>
+            <pre><code class="language-css">background:
+            repeating-linear-gradient(0deg, transparent, transparent 30px, rgba(187, 255, 0, 0.5)30px, rgb(187, 255, 0, 0.5) 60px),
+            repeating-linear-gradient(90deg, transparent, transparent 30px, rgb(187, 255, 0, 0.5)30px, rgb(187, 255, 0, 0.5) 60px);</code></pre>
+            <div class="gradient-example chess-gradient">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Lenguajes de marcas y sistemas de gestión de la información - IES Clara del Rey</p>
+    </footer>
+    <script>
+        hljs.highlightAll();
+        setTimeout(() => window.scrollTo(0, document.body.scrollHeight), 50);
+    </script>
+</body>
+
+</html>
