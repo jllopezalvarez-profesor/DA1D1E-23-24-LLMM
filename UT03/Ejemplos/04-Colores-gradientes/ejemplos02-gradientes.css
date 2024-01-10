@@ -5,6 +5,10 @@ body {
     --gradient-example-height: 100px;
 }
 
+footer {
+    text-align: center;
+}
+
 section {
     border: 1px solid black;
     padding: 1em;

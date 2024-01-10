@@ -1,0 +1,25 @@
+/* Estilos generales para la página de ejemplos */
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 1em;
+}
+
+footer {
+    text-align: center;
+}
+
+section {
+    border: 1px solid black;
+    padding: 1em;
+    margin-bottom: 3em;
+}
+
+h2 {
+    border-bottom: 1px solid black;
+}
+
+pre {
+    margin: 0;
+    font-size: 1.25em;
+    white-space-collapse: preserve-breaks;
+}
