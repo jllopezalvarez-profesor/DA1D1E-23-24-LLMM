@@ -1,20 +1,56 @@
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
+
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+
 header,
 footer {
     background-color: rgb(5%, 0%, 50%);
-
+    text-align: center;
 }
+
 
 header {
     color: white;
-    text-align: center;
+    margin-bottom: 30px;
+}
+
+footer {
+    color: hsl(60, 100%, 50%);
+}
+
+footer address {
+    color: #ffae00;
 }
 
 main {
     background-color: rgb(5%, 0%, 50%, 0.1);
+}
+
+table {
+    /* border-color: rgb(5%, 0%, 50%);
+    border-width: 3px;
+    border-style: solid;*/
+    border: 3px solid rgb(5%, 0%, 50%);
+    border-collapse: collapse;
+
+
+}
+
+th,
+td {
+    border: 1px dashed rgb(5%, 0%, 50%);
+
+}
+
+td {
+    font-size: 80%;
 }
 
 h1 {
