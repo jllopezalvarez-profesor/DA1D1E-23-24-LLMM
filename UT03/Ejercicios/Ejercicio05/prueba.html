@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p span::after {
+            content: '🦮';
+            font-size: 3em;
+        }
+
+        p span:hover::after {
+            content: '🐈';
+            /* content: none; */
+        }
+
+        p span::after:hover {
+            content: '🐠';
+        }
+
+
+
+        p::first-letter {
+            font-size: 3em;
+            color: red;
+        }
+
+        p::first-line {
+            text-decoration: underline;
+        }
+
+        ul li span.mail::before {
+            content: '📧 ';
+        }
+
+
+        li {
+            display: inline-block;
+
+            margin-right: 1em;
+
+            list-style-type: none;
+            margin-top: 4em;
+        }
+
+        li a {
+            background-color: teal;
+            padding: 2em;
+            border-radius: 20px 0
+        }
+    </style>
+</head>
+
+<body>
+    <p>Esto es un párrafo con un <span>span</span> dentro. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad
+        rem mollitia voluptatem exercitationem itaque. Quaerat omnis, voluptate perspiciatis eaque fugiat adipisci odio
+        maiores culpa velit assumenda explicabo sed totam similique. </p>
+
+    <ul>
+        <li><a href="#"><span class="mail">Correo</span></a></li>
+        <li><a href="#"> Telefono</a></li>
+        <li> <a href="#">Contacto</a> </li>
+    </ul>
+
+</body>
+
+</html>

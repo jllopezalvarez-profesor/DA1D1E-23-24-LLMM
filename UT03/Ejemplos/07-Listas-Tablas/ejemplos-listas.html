@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de estilos en listas</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/css.min.js"></script>
+    <link rel="stylesheet" href="ejemplos-listas.css">
+</head>
+
+<body>
+    <header>
+        <h1>Ejemplos de estilos en listas</h1>
+    </header>
+    <main>
+        <section>
+            <h2>list-style-type</h2>
+
+            <h3>Lista con distintos tipos de bullets</h3>
+            <pre><code class="language-css">ul.square {
+            list-style-type: square;
+            }
+            ul.square li.distinto {
+            list-style-type: disclosure-open;
+            }</code></pre>
+            <div class="example">
+                <p>
+                    Se puede usar en los ul/ol o en los li, para usar distintos tipos de icono
+                </p>
+                <ul class="square">
+                    <li>Elemento 1</li>
+                    <li class="distinto">Elemento 2</li>
+                    <li>Elemento 3</li>
+                    <li>Elemento 4</li>
+                </ul>
+            </div>
+
+            <h3>Ejemplo de estilo en listas numeradas</h3>
+            <pre><code class="language-css">ol.armenian {
+            list-style-type: armenian;
+            }
+            ol.armenian li.distinto {
+            list-style-type: decimal-leading-zero;
+            }</code></pre>
+            <div class="example">
+                <p>
+                    En este caso usamos un juego de caracteres para un idioma diferente, y en el segundo elemento usamos
+                    un estilo de numeración con ceros por delante
+                </p>
+                <ol class="armenian">
+                    <li>Elemento 1</li>
+                    <li class="distinto">Elemento 2</li>
+                    <li>Elemento 3</li>
+                    <li>Elemento 4</li>
+                </ol>
+            </div>
+
+            <h3>Ejemplo de uso de symbols() </h3>
+            <pre><code class="language-css">ul.simbolos {
+            list-style-type: symbols(cyclic '\1F34E' '\1F34F' '🐦');
+            }</code></pre>
+            <div class="example">
+                <p>
+                    ddd
+                </p>
+                <ul class="simbolos">
+                    <li>Elemento 1</li>
+                    <li>Elemento 2</li>
+                    <li>Elemento 3</li>
+                    <li>Elemento 4</li>
+                </ul>
+            </div>
+
+        </section>
+        <section>
+            <h2>list-style-position</h2>
+
+            <h3>Outside. Valor por defecto. Las líneas 2 y posteriores se alinean con el texto de la primera línea</h3>
+            <pre><code class="language-css">ul.pos-outside li {
+            list-style-position: outside;
+            }</code></pre>
+            <div class="example">
+                <ul class="pos-outside">
+                    <li>Elemento 1 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem voluptate
+                        laudantium quo inventore nemo a molestiae. Dolorem voluptatibus asperiores, voluptates
+                        laboriosam iusto debitis ipsam nisi officiis! Fugit commodi sapiente ad.</li>
+                    <li>Elemento 2 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem voluptate
+                        laudantium quo inventore nemo a molestiae. Dolorem voluptatibus asperiores, voluptates
+                        laboriosam iusto debitis ipsam nisi officiis! Fugit commodi sapiente ad.</li>
+                    <li>Elemento 3 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem voluptate
+                        laudantium quo inventore nemo a molestiae. Dolorem voluptatibus asperiores, voluptates
+                        laboriosam iusto debitis ipsam nisi officiis! Fugit commodi sapiente ad.</li>
+                    <li>Elemento 4 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem voluptate
+                        laudantium quo inventore nemo a molestiae. Dolorem voluptatibus asperiores, voluptates
+                        laboriosam iusto debitis ipsam nisi officiis! Fugit commodi sapiente ad.</li>
+                </ul>
+            </div>
+
+            <h3>Inside. Las líneas 2 y posteriores se alinean con el icono de la lista</h3>
+            <pre><code class="language-css">ul.pos-inside li {
+            list-style-position: inside;
+            }</code></pre>
+            <div class="example">
+                <ul class="pos-inside">
+                    <li>Elemento 1 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem voluptate
+                        laudantium quo inventore nemo a molestiae. Dolorem voluptatibus asperiores, voluptates
+                        laboriosam iusto debitis ipsam nisi officiis! Fugit commodi sapiente ad.</li>
+                    <li>Elemento 2 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem voluptate
+                        laudantium quo inventore nemo a molestiae. Dolorem voluptatibus asperiores, voluptates
+                        laboriosam iusto debitis ipsam nisi officiis! Fugit commodi sapiente ad.</li>
+                    <li>Elemento 3 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem voluptate
+                        laudantium quo inventore nemo a molestiae. Dolorem voluptatibus asperiores, voluptates
+                        laboriosam iusto debitis ipsam nisi officiis! Fugit commodi sapiente ad.</li>
+                    <li>Elemento 4 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem voluptate
+                        laudantium quo inventore nemo a molestiae. Dolorem voluptatibus asperiores, voluptates
+                        laboriosam iusto debitis ipsam nisi officiis! Fugit commodi sapiente ad.</li>
+                </ul>
+            </div>
+
+
+        </section>
+
+        <section>
+            <h2>list-style-image</h2>
+
+            <h3>Lista con la misma imagen para los elementos de la lista</h3>
+            <pre><code class="language-css">.misma-imagen-lista ul {
+            list-style-image: url(bullet01.gif);
+            }</code></pre>
+            <div class="example misma-imagen-lista">
+                <p>
+                    El icono será igual para todos los li
+                </p>
+                <ul>
+                    <li>Elemento 1</li>
+                    <li>Elemento 2</li>
+                    <li>Elemento 3</li>
+                    <li>Elemento 4</li>
+                </ul>
+            </div>
+
+            <h3>Cambiando la imagen en uno de los elementos</h3>
+            <pre><code class="language-css">.misma-imagen-lista ul,
+            .misma-imagen-lista ol {
+            list-style-image: url(bullet01.gif);
+            }
+            .misma-imagen-lista ul li.distinto {
+            list-style-image: url(bullet02.gif);
+            }
+            .misma-imagen-lista ul li.sin-imagen {
+            list-style-image: none;
+            }</code></pre>
+            <div class="example misma-imagen-lista">
+                <p>
+                    El icono será igual para todos los li, excepto el que tenga su propio estilo para imagen. También
+                    podemos hacer que uno de los li no tenga imagen. En ese caso se mostrará el bullet generado por el
+                    navegador, si no lo hemos cambiado.
+                </p>
+                <ul>
+                    <li>Elemento 1</li>
+                    <li class="distinto">Elemento 2</li>
+                    <li class="sin-imagen">Elemento 3</li>
+                    <li>Elemento 4</li>
+                </ul>
+            </div>
+
+            <h3>Uso en listas numeradas</h3>
+            <pre><code class="language-css">.misma-imagen-lista ul,
+            .misma-imagen-lista ol {
+            list-style-image: url(bullet01.gif);
+            }</code></pre>
+            <div class="example misma-imagen-lista">
+                <p>
+                    Si se usa en listas ol (numeradas) la imagen sustituye la numeración
+                </p>
+                <ol>
+                    <li>Elemento 1</li>
+                    <li>Elemento 2</li>
+                    <li class="distinto">Elemento 3</li>
+                    <li>Elemento 4</li>
+                </ol>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <p>Lenguajes de marcas y sistemas de gestión de la información - IES Clara del Rey</p>
+    </footer>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>

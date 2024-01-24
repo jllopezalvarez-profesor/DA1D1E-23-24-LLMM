@@ -1,0 +1,49 @@
+html {
+    /* font-size: 10em; */
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+nav {
+    background-color: burlywood;
+    padding: 10px;
+}
+
+ul {
+    /* margin: 20px 20px; */
+    background-color: gray;
+    display: flex;
+}
+
+li {
+    margin: 10px 10vh;
+    display: inline;
+    width: 200px;
+    display: inline-block;
+}
+
+a {
+    border: 10px dashed red;
+    background-color: aqua;
+    padding: 10px 30px;
+}
+
+p {
+    padding-top: 2em;
+    background-color: tomato;
+    font-size: 2em;
+    /* font-size: 20px; */
+}
+
+span {
+    padding: 1rem;
+    font-size: 2em;
+    display: block;
+    border: 1px solid
+}
+
+.b {
+    font-size: 2em;
+}

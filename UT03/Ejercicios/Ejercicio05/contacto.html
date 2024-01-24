@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabaja con nosotros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Trabaja con nosotros</h1>
+
+    </header>
+    <nav>
+        <ul>
+            <li><a href="home.html">Inicio</a></li>
+            <li><a href="mision.html">Misión</a></li>
+            <li><a href="vision.html">Visión</a></li>
+            <li><a href="valores.html">Valores</a></li>
+            <li><a href="contacto.html">Trabaja con nosotros</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <form action="http://localhost:8080/view-form/post">
+            <!-- <div>
+                <div class="etiqueta">
+                    <label for="prueba">Prueba:</label>
+                </div>
+                <div class="campo">
+                    <input type="text" id="prueba" name="prueba">
+
+                </div>
+            </div> -->
+            <p><label><span>Nombre</span><input type="text" name="nombre" minlength="3" required></label></p>
+            <p><label><span>Apellido</span><input type="text" name="apellido" minlength="3" required></label></p>
+            <p><label><span>Edad</span><input type="number" name="edad" min="18" max="67" required></label></p>
+            <p>
+                <label><span>Área</span>
+                    <select name="area" required>
+                        <option value="">Seleccione...</option>
+                        <option value="D">Desarrollo</option>
+                        <option value="S">Sistemas</option>
+                        <option value="A">Administración</option>
+                        <option value="C">Comercial</option>
+                    </select>
+                </label>
+            </p>
+            <fieldset>
+                <legend>Forma preferida de contacto:</legend>
+                <label><input type="radio" name="contacto" required> Correo electrónico</label>
+                <label><input type="radio" name="contacto"> Teléfono</label>
+                <label><input type="radio" name="contacto"> Whatsapp o SMS</label>
+            </fieldset>
+            <p>
+                <label>Curriculum vitae: <input type="file" name="cv"></label>
+            </p>
+            <p><button type="submit">Aceptar</button></p>
+        </form>
+
+    </main>
+    <footer>
+        <p>IES Clara del Rey</p>
+    </footer>
+</body>
+
+</html>

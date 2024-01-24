@@ -1,0 +1,129 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+nav ul li {
+    box-sizing: border-box;
+    display: inline-block;
+    background-color: slategray;
+    color: white;
+    margin-right: 1em;
+    list-style-type: none;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+nav ul li a {
+    display: block;
+    padding: .5em 2em;
+    color: white;
+}
+
+nav ul li:hover {
+    background-color: lightgrey;
+    color: blue;
+}
+
+nav ul li:hover a {
+    color: black;
+}
+
+input[type="text"] {
+    width: 55em;
+}
+
+input[type="number"] {
+    width: 4em;
+}
+
+select {
+    width: 55em;
+    /* margin-left: -5px; */
+}
+
+fieldset {
+    box-sizing: border-box;
+    width: 55em;
+
+}
+
+input:invalid,
+select:invalid {
+    background-color: rgb(255, 0, 0, 20%);
+}
+
+input:out-of-range {
+    color: red;
+}
+
+main {
+    margin-left: 3em;
+}
+
+/* input[type='file'] {
+    border: 1px solid red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: blueviolet;
+} */
+
+/* ::file-selector-button {
+    background-color: blueviolet;
+} */
+
+
+
+
+input[type='file']::file-selector-button {
+    background-color: slategray;
+    color: white;
+    border: 1px solid red;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: .75em 2em;
+    margin-right: 1em;
+    text-decoration: underline;
+    font-size: 1.25em;
+}
+
+label span {
+    width: 10em;
+    display: inline-block;
+}
+
+header {
+    background-color: slategray;
+    color: white;
+    text-align: center;
+    font-size: 150%;
+}
+
+footer {
+    background-color: slategray;
+    color: white;
+    text-align: center;
+    font-size: 150%;
+}
+
+main,
+nav {
+    width: 60em;
+    margin: auto;
+}
+
+.etiqueta {
+    width: 20%;
+    float: left;
+}
+
+.campo {
+    width: 70%;
+    float: left;
+}
+
+body,
+a {
+    cursor: progress;
+}

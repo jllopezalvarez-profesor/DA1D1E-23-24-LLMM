@@ -1,0 +1,81 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 1em;
+    --example-height: 100px;
+}
+
+footer {
+    text-align: center;
+}
+
+section {
+    border: 1px solid black;
+    padding: 1em;
+    margin-bottom: 3em;
+}
+
+h2 {
+    border-bottom: 1px solid black;
+}
+
+pre {
+    margin: 0;
+    font-size: 1.25em;
+    white-space-collapse: preserve-breaks;
+}
+
+.example {
+    min-height: var(--example-height);
+    margin: 0;
+    padding: 1em;
+}
+
+.large-example {
+    min-height: calc(var(--example-height)*2);
+}
+
+.example p {
+    margin: 0;
+    padding: .25em;
+}
+
+.misma-imagen-lista ul,
+.misma-imagen-lista ol {
+    list-style-image: url(bullet01.gif);
+}
+
+.misma-imagen-lista ul li.distinto {
+    list-style-image: url(bullet02.gif);
+}
+
+.misma-imagen-lista ul li.sin-imagen {
+    list-style-image: none;
+}
+
+ul.square {
+    list-style-type: square;
+}
+
+ul.square li.distinto {
+    list-style-type: disclosure-open;
+}
+
+ol.armenian {
+    list-style-type: armenian;
+}
+
+ol.armenian li.distinto {
+    list-style-type: decimal-leading-zero;
+}
+
+ul.simbolos {
+    list-style-type: symbols(cyclic '\1F34E' '\1F34F' '🐦');
+}
+
+ul.pos-inside li {
+    list-style-position: inside;
+}
+
+ul.pos-outside li {
+    list-style-position: outside;
+}
