@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 120%;
+        }
+
+        .flex-container {
+            display: flex;
+            background-color: blanchedalmond;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+
+
+
+        .en-bloque {
+            /* display: block; */
+        }
+
+        .flex-item {
+            padding: 1em;
+            border: 1px solid black;
+            flex-basis: 15%;
+            /* min-width: 300px; */
+
+        }
+
+        .flex-interno {
+            /* display: flex; */
+            flex-direction: column;
+            transition: all 1s;
+
+        }
+
+        .flex-interno:hover {
+            flex-grow: 2;
+            background-color: blue;
+
+        }
+    </style>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo asperiores aliquid nulla, blanditiis praesentium
+        vero facilis minima! Nam aut impedit fugiat dignissimos officiis vitae! Incidunt odit excepturi iste at in.
+        Lorem ipsum, dolor sit amet consectetur
+        <span class="flex-container">
+            <span class="flex-item en-bloque">1 Lorem ipsum dolor sit amet consectetur</span>
+            <span class="flex-item flex-interno"><span>2.1</span><span>2.2</span></span>
+            <span class="flex-item">3 hdfka skjdhfkashdk
+                shkdfhask </span>
+            <span class="flex-item">4 Lorem.</span>
+        </span>
+        adipisicing elit. Repudiandae vel quibusdam deleniti earum voluptas ad
+        rerum nesciunt ab perferendis et aut id voluptates nihil nemo omnis, consectetur animi mollitia nostrum!
+    </p>
+
+</body>
+
+</html>
