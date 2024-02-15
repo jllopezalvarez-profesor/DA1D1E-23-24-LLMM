@@ -1,0 +1,44 @@
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "uno uno dos dos dos"
+        "tres cuatro cuatro cuatro cuatro"
+        "cinco seis seis seis siete";
+    grid-template-columns: 200px 200px 1fr 200px 200px;
+    grid-template-rows: 200px 300px 200px;
+}
+
+.hijo1 {
+    background-color: rgb(77, 51, 133);
+    grid-area: uno;
+}
+
+.hijo2 {
+    background-color: rgb(21, 255, 64);
+    grid-area: dos;
+}
+
+.hijo3 {
+    background-color: rgb(138, 56, 116);
+    grid-area: tres;
+}
+
+.hijo4 {
+    background-color: rgb(11, 0, 34);
+    grid-area: cuatro;
+}
+
+.hijo5 {
+    background-color: rgb(194, 80, 80);
+    grid-area: cinco;
+}
+
+.hijo6 {
+    background-color: rgb(0, 157, 37);
+    grid-area: seis;
+}
+
+.hijo7 {
+    background-color: rgb(0, 226, 208);
+    grid-area: siete;
+}

@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: rgb(0, 0, 105);
+    font-weight: bold;
+}
+
+a:hover {
+    color: rgb(0, 0, 255);
+    text-decoration: double;
+    text-decoration-line: underline;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(236, 236, 236);
+}
+
+body>header {
+    background-color: rgb(0, 0, 51);
+    color: rgb(236, 236, 236);
+    padding: 2rem;
+}
+
+body>header a {
+    color: yellow
+}
+
+body>header a:hover {
+    color: orange;
+}
+
+h1 {
+    color: white;
+    font-size: 3rem;
+}
+
+nav {
+    background-color: rgb(194, 193, 193);
+    padding: 1rem;
+}
+
+nav>ol {
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+nav>ol li {
+    text-wrap: nowrap;
+    margin: .25rem
+}
+
+nav>ol li a {
+    padding: .5rem 1rem;
+    background-color: rgb(0, 0, 51);
+    display: block;
+    color: orange;
+}
+
+nav>ol li a:hover {
+    color: yellow;
+}
+
+section {
+    border: 4px solid rgb(0, 0, 51);
+    margin: 1em 0;
+    padding: 1em;
+}
+
+section>header {
+    background-color: rgb(32, 32, 155);
+    color: white;
+    padding: 1rem;
+}
+
+section p {
+    line-height: 150%;
+    margin-bottom: .5rem;
+}
+
+section>p:first-of-type::first-letter {
+    font-size: 200%;
+    font-weight: bold;
+}
+
+#ventajas-usar-css ul {
+    padding-left: 2em;
+    list-style-position: inside;
+}
+
+form {
+    margin-top: 1em;
+}
+
+input {
+
+    padding: .5em;
+}
+
+
+input:user-invalid,
+textarea:user-invalid {
+    background-color: rgb(255, 190, 167);
+    color: red;
+    border-color: 1px solid red;
+}
+
+button {
+    padding: .5em;
+    font-size: 1em;
+}

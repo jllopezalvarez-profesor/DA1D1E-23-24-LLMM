@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8 - Selectores y estilos</title>
+    <link rel="stylesheet" href="Ejercicio08.css">
+</head>
+
+<body>
+    <header>
+        <h1>Ejercicio 8 - Selectores y estilos</h1>
+        <div>
+            <p>El <a href="#!">diseño de una página o sitio web</a> necesita un lenguaje común para que los navegadores
+                puedan interpretarlo y mostrarlo a las personas de la forma correcta. Pero también lo requieren para que
+                otros diseñadores hagan las modificaciones necesarias para su optimización.</p>
+            <p>Uno de estos lenguajes es el CSS, un gran aliado del HTML que transforma la experiencia de tus
+                visitantes. Con este artículo, aprenderás todo lo que necesitas saber sobre sus funciones y ventajas.
+                ¡Sigue
+                leyendo!
+            </p>
+        </div>
+    </header>
+    <nav>
+        <ol>
+            <li><a href="#!">Qué es CSS</a></li>
+            <li><a href="#!">Para qué sirve CSS</a></li>
+            <li><a href="#!">Ventajas y desventajas de usar CSS</a></li>
+            <li><a href="#!">Cómo funciona CSS</a></li>
+            <li><a href="#!">Diferencia entre HTML y CSS</a></li>
+            <li><a href="#!">Características de CSS</a></li>
+            <li><a href="#!">Cómo usar CSS</a></li>
+            <li><a href="#!">Los 3 tipos de estilos CSS</a></li>
+            <li><a href="#!">Ejemplos de CSS</a></li>
+            <li><a href="#!">Integración con otros lenguajes de programación</a></li>
+            <li><a href="#!">Preguntas frecuentes sobre CSS</a></li>
+        </ol>
+    </nav>
+    <main>
+        <section>
+            <header>
+                <h2>Qué es CSS</h2>
+            </header>
+            <p>CSS son las siglas en inglés para «hojas de estilo en cascada» (Cascading Style Sheets). Básicamente, es
+                un
+                lenguaje que maneja el diseño y presentación de las páginas web, es decir, cómo lucen cuando un usuario
+                las
+                visita. Funciona junto con el lenguaje HTML que se encarga del contenido básico de los sitios.</p>
+            <p>Se les denomina hojas de estilo «en cascada» porque puedes tener varias y una de ellas con las
+                propiedades
+                heredadas (o «en cascada») de otras.</p>
+            <p>Para muchas personas, una simple plantilla de blog es suficiente. Aun así, cuando quieras personalizar la
+                apariencia de un sitio, necesitarás implementar CSS que, en conjunto con un buen <a href="#!">CMS</a>,
+                te
+                ayudará a potenciar el alcance de tu contenido.</p>
+        </section>
+        <section>
+            <header>
+                <h2>Para qué sirve CSS</h2>
+            </header>
+            <p>Con CSS, puedes crear reglas para decirle a tu sitio web cómo quieres mostrar la información y guardar
+                los
+                comandos para elementos de estilo (como fuentes, colores, tamaños, etc.) separados de los que configuran
+                el
+                contenido.</p>
+            <p>Además, puedes crear formatos específicos útiles para comunicar tus ideas y producir experiencias más
+                agradables,
+                en el aspecto visual, para los usuarios del sitio web.</p>
+        </section>
+
+
+
+        <section id="ventajas-usar-css">
+            <header>
+                <h2>Ventajas y desventajas de usar CSS</h2>
+            </header>
+
+            <h3>Ventajas de usar CSS</h3>
+            <ul>
+                <li><strong>Separación de la estructura y la presentación.</strong> CSS permite
+                    separar el
+                    contenido HTML de su presentación visual. Es decir, te permite mantener el código HTML limpio y
+                    estructurado, mientras que el estilo se define en un archivo CSS separado. Este orden mejora la
+                    legibilidad
+                    del código y facilita el mantenimiento, así como la actualización de los estilos.</li>
+                <li><strong>Consistencia y mantenibilidad.</strong> Al utilizar CSS, puedes aplicar
+                    estilos
+                    de manera consistente a un sitio o aplicación web. Los estilos se definen una vez y se aplican a
+                    múltiples
+                    elementos en las páginas, lo que favorece la renovación de la apariencia visual de todo el proyecto.
+                </li>
+                <li><strong>Eficiencia en el rendimiento.</strong> CSS permite cargar estilos
+                    externos en un
+                    archivo separado. Con esto, el navegador almacenará en caché los estilos y los aplicará a todas las
+                    páginas
+                    del sitio, lo que mejora el rendimiento al reducir la cantidad de datos que deben transferirse entre
+                    el
+                    servidor y el cliente.</li>
+                <li><strong>Flexibilidad y control.</strong> Asimismo, ofrece una amplia gama de
+                    propiedades
+                    y selectores con los que tendrás un control preciso sobre el estilo de los elementos HTML. Podrás
+                    modificar,
+                    de forma sencilla, los colores, fuentes, márgenes, tamaños, diseños, etc. Gracias a esta
+                    características,
+                    podrás personalizar y adaptar a varios dispositivos y tamaños de pantalla tu sitio web.</li>
+            </ul>
+            <h3>Desventajas de usar CSS</h3>
+            <ul>
+                <li><strong>Curva de aprendizaje.</strong> CSS puede tener una curva de aprendizaje
+                    empinada, en particular, para los principiantes. Entender, por completo, todas las propiedades,
+                    selectores y
+                    conceptos avanzados puede llevar tiempo y práctica.</li>
+                <li><strong>Compatibilidad entre navegadores.</strong> Aunque los estándares de CSS
+                    son de
+                    los más aceptados, algunos navegadores podrían interpretar y renderizar los estilos de manera
+                    diferente.
+                    Esto puede resultar en inconsistencias visuales y requerir pruebas o ajustes adicionales para
+                    garantizar la
+                    compatibilidad entre plataformas.</li>
+                <li><strong>Especificidad y herencia.</strong> CSS utiliza reglas de especificidad y
+                    herencia para determinar qué estilos se aplican a los elementos. En ocasiones, el orden de las
+                    reglas y la
+                    jerarquía pueden generar resultados inesperados. Esto requiere una comprensión cuidadosa de cómo
+                    funcionan
+                    estas reglas para evitar conflictos y problemas de estilo.</li>
+                <li><strong>Limitaciones en la maquetación.</strong> Aunque CSS ofrece una amplia
+                    gama de
+                    propiedades para el diseño y la maquetación, puede presentar limitaciones en ciertos casos más
+                    complejos.
+                    Algunos diseños específicos pueden requerir soluciones adicionales o el uso de técnicas más
+                    avanzadas para
+                    lograr el resultado deseado.</li>
+            </ul>
+
+
+        </section>
+
+        <section>
+            <header>
+                <h2>Cómo funciona CSS</h2>
+            </header>
+            <p>CSS funciona como complemento a la información que forma parte de un sitio web. Mientras que el
+                código en
+                HTML incluye todos los datos, el código en CSS se encarga de darles formato y presentarlos
+                visualmente a
+                través de un navegador.</p>
+            <p>Al acceder a un sitio web, el navegador debe rastrear la información contenida en el HTML y traducirla a
+                un DOM
+                (o modelo de objetos del documento). Estos objetos deberán ser conjuntados con los bloques de código
+                correspondientes en CSS para que el estilo elegido sea aplicado a ellos y aparezcan en el formato
+                asignado en el
+                ordenador.</p>
+            <p>Según sean los <a href="#!">selectores que hayas
+                    utilizado en
+                    tu CSS,</a> se aplicarán diferentes propiedades a cada bloque de información en HTML. Al
+                usarlos,
+                podrás modificar, con facilidad, el estilo de un conjunto definido de bloques y mantener la imagen
+                de tu
+                marca en todo tu contenido.</p>
+        </section>
+
+        <section>
+            <header>
+                <h2>Diferencia entre HTML y CSS</h2>
+            </header>
+            <p>HTML da estructura al contenido de un sitio web. Las siglas corresponden a HyperText Markup Language, que
+                significa «lenguaje de marcas de hipertexto» y hacen referencia al código que define el significado
+                de las
+                instrucciones dadas a una plataforma computacional.</p>
+            <p>Estas instrucciones representan todos los enlaces (o hipertextos) que vinculan los contenidos de una
+                página, por
+                lo que HTML es la base de cualquier sitio web. En este lenguaje, es posible incluir toda la
+                información
+                referente al contenido, así como las imágenes, audios y estilos. Sin embargo, su uso para estas tareas
+                conlleva
+                una mayor complejidad en el código fuente.</p>
+            <p>Para hacer más eficiente el uso de HTML, se han diseñado lenguajes computacionales que facilitan la
+                gestión de
+                los datos relacionados con el diseño visual de las plataformas. CSS es uno de los lenguajes más
+                importantes
+                que se utilizan para ordenar las instrucciones referentes a la apariencia de un sitio y presentar los
+                contenidos
+                de una página de forma atractiva.</p>
+            <p>De este modo, HTML se emplea para estructurar el contenido de un sitio, mientras que CSS, para
+                estructurar
+                su presentación.</p>
+            <p>Si el contenido es el rey, CSS es el segundo al mando. Por eso, como propietario de un sitio o como
+                experto en
+                marketing con conocimiento web, es conveniente que comprendas algunos aspectos fundamentales de esta
+                herramienta. ¡Comencemos!</p>
+        </section>
+        <section>
+            <header>
+                <h2>Características de CSS</h2>
+            </header>
+            <article>
+                <h3>Es un lenguaje de programación diferente a HTML</h3>
+                <p>HTML es un lenguaje que sirve para gestionar la información contenida en un sitio web. Por otro lado,
+                    CSS
+                    tiene
+                    la función de estructurar el estilo de las páginas. Ambos lenguajes trabajan en conjunto para
+                    presentar la
+                    información al público final.</p>
+            </article>
+            <article>
+                <h3>Permite el apilamiento de instrucciones para definir formatos específicos</h3>
+                <p>Esto significa que se pueden crear bloques de instrucciones anidadas que permiten hacer
+                    modificaciones
+                    generales,
+                    de modo sencillo, lo cual simplifica la tarea de diseño y la creación de estilos estandarizados.
+                    Así, se
+                    crean formatos específicos que pueden aplicarse a distintas páginas, los cuales, además, son
+                    modificables de
+                    forma muy sencilla.</p>
+            </article>
+            <article>
+                <h3>Es utilizable en todos los navegadores y plataformas</h3>
+                <p>Debido a que es un lenguaje popular para dar formato a los sitios web, su uso es universal para un
+                    amplio
+                    número de dispositivos, formatos y plataformas como Edge, Safari, Chrome, etc. Por ello, es fácil
+                    dar
+                    formato a las páginas, según el navegador utilizado por cada usuario.</p>
+            </article>
+            <article>
+                <h3>Optimiza el funcionamiento de las páginas web</h3>
+                <p>Al separar el código de contenido y de estilo, es mucho más rápido el procesamiento de la
+                    información,
+                    lo cual se traduce en una experiencia más fluida para los usuarios y en una carga de trabajo menor
+                    para
+                    los
+                    procesadores. Es importante e imprescindible la sincronización del código en HTML con CSS para que
+                    la
+                    información se presente de modo correcto.</p>
+            </article>
+            <article>
+                <h3>Tiene una sintaxis específica</h3>
+                <p>Si bien, la mayoría de los lenguajes comparten algunas funciones y signos, existen particularidades
+                    en el
+                    uso de
+                    CSS, por lo que es necesario conocer el lenguaje de programación, así como las características de
+                    apilamiento.
+                    Más adelante revisaremos algunas de sus utilidades específicas.</p>
+            </article>
+            <article>
+                <h3>Permite personalizar totalmente la apariencia de las páginas</h3>
+                <p>CSS da cabida a una gran libertad creativa. Los diseñadores tienen un amplio espectro de
+                    posibilidades con
+                    sus herramientas. El uso de diferentes códigos de colores y de fuentes permite emplear paletas de
+                    muchísimas tonalidades y múltiples tipografías. Asimismo, se pueden disponer los elementos visuales
+                    de un
+                    sitio según las necesidades del diseño.</p>
+            </article>
+        </section>
+        <section>
+            <header>
+                <h2>Contacta con nosotros</h2>
+            </header>
+            <form>
+                <p>
+                    <label>Nombre:
+                        <input type="text" name="nombre" required minlength="3">
+
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Apellidos:
+                        <input type="text" name="apellidos" required minlength="3">
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <textarea name="comentarios" cols="30" rows="10" required minlength="20"></textarea>
+
+                    </label>
+                </p>
+                <p><button type="submit">Enviar</button></p>
+            </form>
+        </section>
+
+    </main>
+    <footer>
+        <p>Ejercicio 8 - Selectores y estilos.</p>
+        <address>IES Clara del Rey - Padre claret 8</address>
+    </footer>
+
+</body>
+
+</html>
