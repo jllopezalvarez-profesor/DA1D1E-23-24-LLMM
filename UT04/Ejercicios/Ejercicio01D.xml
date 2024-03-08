@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<agenda>
+    <contacto id="cto001">
+        <nombre>José Luis</nombre>
+        <apellidos>López Álvarez</apellidos>
+        <direccion>
+            <tipoVia>Calle</tipoVia>
+            <nombreVia>Padre Claret</nombreVia>
+            <numeroVia>8</numeroVia>
+            <infoAdicional>Planta 1ª Aula i.2</infoAdicional>
+            <codPostal>28002</codPostal>
+            <poblacion>
+                Madrid
+            </poblacion>
+        </direccion>
+
+
+
+        <telefonos fijo=""
+            movil="" trabajo="" />
+        <imagen><![CDATA[ bsdfkabshdfas
+            dfasjkhdfashdkf
+            <fsdfsd 
+
+            ]]&gt;
+
+
+            
+            hjhjjhjk]]></imagen> Texto antes &gt; texto después </contacto>
+
+</agenda>

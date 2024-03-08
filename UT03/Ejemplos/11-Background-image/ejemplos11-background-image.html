@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos background-image</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/css.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Ejemplos background-image</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Comportamiento por defecto y repetición del fondo</h2>
+
+            <h3>Comportamiento por defecto</h3>
+            <pre><code class="language-css">background-image: url("fondo1.jpg");</code></pre>
+            <div class="fondo fondo-pequenio">
+                <p>Por defecto el fondo se repite, para rellenar el área. Es el equivalente a usar "repeat" para
+                    "background-repeat". En fondos diseñados para que se repitan, puede darse la impresión de que se
+                    tiene una imagen grande de fondo, cuando en realidad es una pequeña que se repite. </p>
+            </div>
+
+            <h3>Sin repetición</h3>
+            <pre><code class="language-css">background-image: url("fondo1.jpg");
+            background-repeat: no-repeat;
+            background-color: aqua;</code></pre>
+            <div class="fondo fondo-pequenio-no-repeat">
+                <p>Si no se repite, se mostrará el color de fondo en las zonas no cubiertas por la imagen. </p>
+            </div>
+
+            <h3>Repetición horizontal (eje x)</h3>
+            <pre><code class="language-css">background-image: url("fondo1.jpg");
+                        background-repeat: repeat-x;
+                        background-color: aqua;</code></pre>
+            <div class="fondo fondo-pequenio-repeat-x">
+                <p>Repetición en el eje x. </p>
+            </div>
+
+            <h3>Repetición vertical (eje y)</h3>
+            <pre><code class="language-css">background-image: url("fondo1.jpg");
+                                    background-repeat: repeat-y;
+                                    background-color: aqua;</code></pre>
+            <div class="fondo fondo-pequenio-repeat-y">
+                <p>Repetición en el eje y. </p>
+            </div>
+
+            <h3>Repetición redondeando tamaño</h3>
+            <pre><code class="language-css">background-image: url("fondo1.jpg");
+                                                background-repeat: round;
+                                                background-color: aqua;</code></pre>
+            <div class="fondo fondo-pequenio-repeat-round">
+                <p>Igual que repeat, pero "estira" la imagen para que no se "corte" en los extremos del elemento.</p>
+            </div>
+
+            <h3>Repetición con espaciado</h3>
+            <pre><code class="language-css">background-image: url("fondo1.jpg");
+                                                            background-repeat: space;
+                                                            background-color: aqua;</code></pre>
+            <div class="fondo fondo-pequenio-repeat-space">
+                <p>Igual que repeat, pero introduce espacios entre imágenes para que no se "corte" en los extremos del
+                    elemento.</p>
+            </div>
+
+        </section>
+
+        <section>
+            <h2>Posicionamiento de imagen</h2>
+
+            <h3>Posicionamiento con unidades</h3>
+            <pre><code class="language-css">background-image: url("fondo1.jpg");
+background-repeat: no-repeat;
+            background-position: 100px, 100px;
+            background-color: aqua;</code></pre>
+            <div class="fondo fondo-pos-absoluto">
+                <p>El fondo no se repite y lo posicionamos a 100px del borde superior y del lado izquierdo. Puede usarse
+                    porcentajes. En ese caso el porcentaje se refiere a las dimensiones del elemento al que se aplica el
+                    fondo. </p>
+            </div>
+
+            <h3>Posicionamiento con palabras clave</h3>
+            <pre><code class="language-css">url("fondo1.jpg");
+            background-repeat: no-repeat;
+            background-position: bottom right;
+            background-color: aqua;</code></pre>
+            <div class="fondo fondo-pos-keyword">
+                <p>Se pueden usar palabras clave (top, left, right, bottom y center) para indicar dónde se debe colocar
+                    la imagen. </p>
+            </div>
+        </section>
+
+
+        <section>
+            <h2>Imagen como fondo de página</h2>
+
+            <h3>Comportamiento por defecto - scroll</h3>
+            <pre><code class="language-css">background-image: url("fondo2.jpg");
+            background-attachment: scroll;</code></pre>
+            <div>
+                <p>Por defecto el fondo "sigue" el scroll de la página, se mueve al desplazarse por ella. </p>
+                <p><a href="fondo-scroll.html" target="_blank">Ejemplo de página con fondo "scroll".</a></p>
+            </div>
+
+            <h3>Fondo fijo</h3>
+            <pre><code class="language-css">background-image: url("fondo2.jpg");
+                        background-attachment: fixed;</code></pre>
+            <div>
+                <p>Podemos hacer que el contenido se "deslice" sobre el fondo, que se mantiene fijo. </p>
+                <p><a href="fondo-fixed.html" target="_blank">Ejemplo de página con fondo "fixed".</a></p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Estirando el fondo - background-size</h2>
+
+            <h3>Usando tamaño fijo</h3>
+            <pre><code class="language-css">background-image: url("fondo1.jpg");
+            background-size: 70px 150px;</code></pre>
+            <div class="fondo fondo-tam-fijo">
+                <p>Se puede cambiar el tamaño indicando dimensiones absolutas. Si usamos sólo una dimensión se ajusta el
+                    ancho, y se mantienen proporciones. Si usamos dos, la imagen se puede deformar.</p>
+            </div>
+
+            <h3>Usando porcentaje</h3>
+            <pre><code class="language-css">background-image: url("fondo1.jpg");
+            background-size: 50%;</code></pre>
+            <div class="fondo fondo-tam-mitad">
+                <p>Si usamos un porcentaje, el porcentaje se refiere al ancho / alto del elemento al que aplicamos el
+                    fondo. Se pueden usar también uno o dos valores, y ocurre igual que con fijas, se puede deformar la
+                    imagen.</p>
+            </div>
+
+            <h3>Ajustar al ancho</h3>
+            <pre><code class="language-css">background-image: url("fondo1.jpg");
+            background-size: cover;</code></pre>
+            <div class="fondo fondo-cover">
+                <p>La imagen de fondo se estira para que ocupe siempre el ancho del elemento.</p>
+            </div>
+
+            <h3>Ajustar al alto</h3>
+            <pre><code class="language-css">background-image: url("fondo1.jpg");
+            background-size: contain;</code></pre>
+            <div class="fondo fondo-contain">
+                <p>La imagen de fondo se estira para que ocupe siempre el alto del elemento.</p>
+            </div>
+
+        </section>
+
+        <section>
+            <h2>Degradados</h2>
+            <p>Se pueden usar degradados en lugar de imágenes. Ver la <a
+                    href="../04-Colores-gradientes/ejemplos02-gradientes.html">página de ejemplos de degradados</a> para
+                más informacion.</p>
+
+            <h3>Ejemplo de fondo degradado</h3>
+            <pre><code class="language-css">background-image: linear-gradient(90deg, red, blue);</code></pre>
+            <div class="fondo fondo-degradado">
+                <p>Fondo degradado</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Lenguajes de marcas y sistemas de gestión de la información - IES Clara del Rey</p>
+    </footer>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>

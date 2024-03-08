@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos uso de grid</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/css.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Ejemplos uso de grid</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Grid con tamaños absolutos (px)</h2>
+
+            <h3>Sólo display:grid</h3>
+            <p>Esto no tiene un efecto sobre el contenido. Aparentemente, los elementos interiores no se ven alterados.
+                Para que se dispongan en forma de rejilla hay que definir filas y columnas.</p>
+            <p>Los contenidos se ven centrados vertical y horizontalmente porque cada elemento del grid es a su vez un
+                elemento flex con el contenido justificado en eje primario al centro, y con alineado en eje secundario
+                al centro</p>
+            <pre><code class="language-css">display: grid;</code></pre>
+            <div class="grid-container grid-01">
+                <p class="grid-item"><span>Item 1</span></p>
+                <p class="grid-item"><span>Item 2</span></p>
+                <p class="grid-item"><span>Item 3</span></p>
+                <p class="grid-item"><span>Item 4</span></p>
+                <p class="grid-item"><span>Item 5</span></p>
+                <p class="grid-item"><span>Item 6</span></p>
+            </div>
+
+            <h3>4 columnas de 100 px</h3>
+            <p>Se crean cuatro columnas del ancho indicado. El alto se adapta a los contenidos.</p>
+            <p>Si hay más de cuatro elementos, saltan y se repite el patrón.</p>
+            <pre><code class="language-css">display: grid;
+            grid-template-columns: 100px 100px 100px 100px;</code></pre>
+            <div class="grid-container grid-02">
+                <p class="grid-item"><span>Item 1</span></p>
+                <p class="grid-item"><span>Item 2</span></p>
+                <p class="grid-item"><span>Item 3. Este elemento tiene más contenido, y puede hacer que crezca la
+                        fila.</span></p>
+                <p class="grid-item"><span>Item 4</span></p>
+                <p class="grid-item"><span>Item 5</span></p>
+                <p class="grid-item"><span>Item 6</span></p>
+            </div>
+
+            <h3>3 columnas de 100 px, y dos filas, una de 125px y otra de 200px</h3>
+            <p>En este caso se repite sólo el patrón de columnas, no el de filas, que simplemente ajustan su tamaño a la
+                altura necesaria para los elementos.</p>
+            <pre><code class="language-css">display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 125px 200px;</code></pre>
+            <div class="grid-container grid-03">
+                <p class="grid-item"><span>Item 1</span></p>
+                <p class="grid-item"><span>Item 2</span></p>
+                <p class="grid-item"><span>Item 3</span></p>
+                <p class="grid-item"><span>Item 4</span></p>
+                <p class="grid-item"><span>Item 5</span></p>
+                <p class="grid-item"><span>Item 6</span></p>
+                <p class="grid-item"><span>Item 7</span></p>
+                <p class="grid-item"><span>Item 8</span></p>
+                <p class="grid-item"><span>Item 9</span></p>
+                <p class="grid-item"><span>Item 10</span></p>
+                <p class="grid-item"><span>Item 11</span></p>
+                <p class="grid-item"><span>Item 12</span></p>
+                <p class="grid-item"><span>Item 13</span></p>
+                <p class="grid-item"><span>Item 14</span></p>
+            </div>
+        </section>
+        <section>
+            <h2>Grid con fracción restante (fr)</h2>
+
+            <h3>Tres columnas del mismo ancho</h3>
+            <p>En este caso el espacio se reparte por igual entre las tres columnas</p>
+            <pre><code class="language-css">display: grid;
+            grid-template-columns: 1fr 1fr 1fr;</code></pre>
+            <div class="grid-container grid-04">
+                <p class="grid-item"><span>Item 1</span></p>
+                <p class="grid-item"><span>Item 2</span></p>
+                <p class="grid-item"><span>Item 3</span></p>
+                <p class="grid-item"><span>Item 4</span></p>
+                <p class="grid-item"><span>Item 5</span></p>
+                <p class="grid-item"><span>Item 6</span></p>
+            </div>
+
+            <h3>Tres columnas, la central el triple que las otras dos</h3>
+            <p>El espacio disponible se divide entre cinco (1 + 3 + 1) y se asigna a cada columna lo que corresponda
+            </p>
+            <pre><code class="language-css">display: grid;
+            grid-template-columns: 1fr 3fr 1fr;</code></pre>
+            <div class="grid-container grid-05">
+                <p class="grid-item"><span>Item 1</span></p>
+                <p class="grid-item"><span>Item 2</span></p>
+                <p class="grid-item"><span>Item 3</span></p>
+                <p class="grid-item"><span>Item 4</span></p>
+                <p class="grid-item"><span>Item 5</span></p>
+                <p class="grid-item"><span>Item 6</span></p>
+            </div>
+
+            <h3>Igual que el anterior, pero se añade definción de filas. </h3>
+            <pre><code class="language-css">display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            grid-template-rows: 1fr 2fr 3fr;</code></pre>
+            <div class="grid-container grid-06">
+                <p class="grid-item"><span>Item 1</span></p>
+                <p class="grid-item"><span>Item 2</span></p>
+                <p class="grid-item"><span>Item 3</span></p>
+                <p class="grid-item"><span>Item 4</span></p>
+                <p class="grid-item"><span>Item 5</span></p>
+                <p class="grid-item"><span>Item 6</span></p>
+                <p class="grid-item"><span>Item 7</span></p>
+                <p class="grid-item"><span>Item 8</span></p>
+                <p class="grid-item"><span>Item 9</span></p>
+            </div>
+
+        </section>
+        <section>
+            <h2>Combinando absolutos y fracción restante</h2>
+            <h3>Una columna de 100px, 1 fracción, una columna de 200 px y dos columnas de 2fr cada una.</h3>
+            <p>El valor de cada fr se calcula una vez restado el tamaño de las columnas de ancho fijo.</p>
+            <pre><code class="language-css">display: grid;
+            grid-template-columns: 100px 1fr 200px 2fr 2fr;
+            grid-template-rows: 1fr 2fr;</code></pre>
+            <div class="grid-container grid-07">
+                <p class="grid-item"><span>Item 1</span></p>
+                <p class="grid-item"><span>Item 2</span></p>
+                <p class="grid-item"><span>Item 3</span></p>
+                <p class="grid-item"><span>Item 4</span></p>
+                <p class="grid-item"><span>Item 5</span></p>
+                <p class="grid-item"><span>Item 6</span></p>
+                <p class="grid-item"><span>Item 7</span></p>
+                <p class="grid-item"><span>Item 8</span></p>
+                <p class="grid-item"><span>Item 9</span></p>
+                <p class="grid-item"><span>Item 10</span></p>
+                <p class="grid-item"><span>Item 11</span></p>
+                <p class="grid-item"><span>Item 12</span></p>
+                <p class="grid-item"><span>Item 13</span></p>
+                <p class="grid-item"><span>Item 14</span></p>
+                <p class="grid-item"><span>Item 15</span></p>
+                <p class="grid-item"><span>Item 16</span></p>
+                <p class="grid-item"><span>Item 17</span></p>
+                <p class="grid-item"><span>Item 18</span></p>
+                <p class="grid-item"><span>Item 19</span></p>
+                <p class="grid-item"><span>Item 20</span></p>
+                <p class="grid-item"><span>Item 21</span></p>
+                <p class="grid-item"><span>Item 22</span></p>
+                <p class="grid-item"><span>Item 23</span></p>
+                <p class="grid-item"><span>Item 24</span></p>
+                <p class="grid-item"><span>Item 25</span></p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Usando repeat</h2>
+            <h3>Cuadrícula de 20 columnas.</h3>
+            <p>Con la función repeat ahorramos escribir todos los anchos de las columnas</p>
+            <pre><code class="language-css">display: grid;
+            grid-template-columns: repeat(20, 1fr);</code></pre>
+            <div class="grid-container grid-08">
+                <p class="grid-item"><span>Item 1</span></p>
+                <p class="grid-item"><span>Item 2</span></p>
+                <p class="grid-item"><span>Item 3</span></p>
+                <p class="grid-item"><span>Item 4</span></p>
+                <p class="grid-item"><span>Item 5</span></p>
+                <p class="grid-item"><span>Item 6</span></p>
+                <p class="grid-item"><span>Item 7</span></p>
+                <p class="grid-item"><span>Item 8</span></p>
+                <p class="grid-item"><span>Item 9</span></p>
+                <p class="grid-item"><span>Item 10</span></p>
+                <p class="grid-item"><span>Item 11</span></p>
+                <p class="grid-item"><span>Item 12</span></p>
+                <p class="grid-item"><span>Item 13</span></p>
+                <p class="grid-item"><span>Item 14</span></p>
+                <p class="grid-item"><span>Item 15</span></p>
+                <p class="grid-item"><span>Item 16</span></p>
+                <p class="grid-item"><span>Item 17</span></p>
+                <p class="grid-item"><span>Item 18</span></p>
+                <p class="grid-item"><span>Item 19</span></p>
+                <p class="grid-item"><span>Item 20</span></p>
+                <p class="grid-item"><span>Item 21</span></p>
+                <p class="grid-item"><span>Item 22</span></p>
+                <p class="grid-item"><span>Item 23</span></p>
+                <p class="grid-item"><span>Item 24</span></p>
+                <p class="grid-item"><span>Item 25</span></p>
+            </div>
+            <h3>Cuadrícula de 10 columnas, pero que repite cinco veces el patrón de una columna de 100px y una de 1fr.
+            </h3>
+            <pre><code class="language-css">display: grid;
+            grid-template-columns: repeat(5, 100px 1fr);</code></pre>
+            <div class="grid-container grid-09">
+                <p class="grid-item"><span>Item 1</span></p>
+                <p class="grid-item"><span>Item 2</span></p>
+                <p class="grid-item"><span>Item 3</span></p>
+                <p class="grid-item"><span>Item 4</span></p>
+                <p class="grid-item"><span>Item 5</span></p>
+                <p class="grid-item"><span>Item 6</span></p>
+                <p class="grid-item"><span>Item 7</span></p>
+                <p class="grid-item"><span>Item 8</span></p>
+                <p class="grid-item"><span>Item 9</span></p>
+                <p class="grid-item"><span>Item 10</span></p>
+                <p class="grid-item"><span>Item 11</span></p>
+                <p class="grid-item"><span>Item 12</span></p>
+                <p class="grid-item"><span>Item 13</span></p>
+                <p class="grid-item"><span>Item 14</span></p>
+                <p class="grid-item"><span>Item 15</span></p>
+                <p class="grid-item"><span>Item 16</span></p>
+                <p class="grid-item"><span>Item 17</span></p>
+                <p class="grid-item"><span>Item 18</span></p>
+                <p class="grid-item"><span>Item 19</span></p>
+                <p class="grid-item"><span>Item 20</span></p>
+                <p class="grid-item"><span>Item 21</span></p>
+                <p class="grid-item"><span>Item 22</span></p>
+                <p class="grid-item"><span>Item 23</span></p>
+                <p class="grid-item"><span>Item 24</span></p>
+                <p class="grid-item"><span>Item 25</span></p>
+            </div>
+            <h3>Cuadrícula de tres columnas iguales, y usamos repeat en las filas.</h3>
+            <p>Cuando se acaba el repeat de filas, se repite el patrón de columna ocupando la altura necesaria para la
+                fila.</p>
+            <pre><code class="language-css">display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr 2fr);</code></pre>
+            <div class="grid-container grid-10">
+                <p class="grid-item"><span>Item 1</span></p>
+                <p class="grid-item"><span>Item 2</span></p>
+                <p class="grid-item"><span>Item 3</span></p>
+                <p class="grid-item"><span>Item 4</span></p>
+                <p class="grid-item"><span>Item 5</span></p>
+                <p class="grid-item"><span>Item 6</span></p>
+                <p class="grid-item"><span>Item 7</span></p>
+                <p class="grid-item"><span>Item 8</span></p>
+                <p class="grid-item"><span>Item 9</span></p>
+                <p class="grid-item"><span>Item 10</span></p>
+                <p class="grid-item"><span>Item 11</span></p>
+                <p class="grid-item"><span>Item 12</span></p>
+                <p class="grid-item"><span>Item 13</span></p>
+                <p class="grid-item"><span>Item 14</span></p>
+                <p class="grid-item"><span>Item 15</span></p>
+                <p class="grid-item"><span>Item 16</span></p>
+                <p class="grid-item"><span>Item 17</span></p>
+                <p class="grid-item"><span>Item 18</span></p>
+                <p class="grid-item"><span>Item 19</span></p>
+                <p class="grid-item"><span>Item 20</span></p>
+                <p class="grid-item"><span>Item 21</span></p>
+                <p class="grid-item"><span>Item 22</span></p>
+                <p class="grid-item"><span>Item 23</span></p>
+                <p class="grid-item"><span>Item 24</span></p>
+                <p class="grid-item"><span>Item 25</span></p>
+            </div>
+        </section>
+
+
+        <section>
+            <h2>Filas automáticas (indefinidas / infinitas)</h2>
+            <h3>Cuadrícula de tres columnas iguales, y usamos grid-auto-rows en las filas.</h3>
+            <p>La propiedad grid-auto-rows permite definir el alto de las filas que no se han especifocado con
+                grid-template-rows.</p>
+            <p>En este caso, la primera y segunda fila se han definido con template, y el resto de filas usan el valor
+                definido en grid-auto-rows. </p>
+            <p>El uso de unidades fr en grid-auto-rows no es trivial. Necesita que se defina al menos una fila con
+                tamaño fr en grid-template-rows para poder tomarla como referencia. </p>
+
+            <pre><code class="language-css">display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 100px 300px;
+            grid-auto-rows: 200px;</code></pre>
+            <div class="grid-container grid-11">
+                <p class="grid-item"><span>Item 1</span></p>
+                <p class="grid-item"><span>Item 2</span></p>
+                <p class="grid-item"><span>Item 3</span></p>
+                <p class="grid-item"><span>Item 4</span></p>
+                <p class="grid-item"><span>Item 5</span></p>
+                <p class="grid-item"><span>Item 6</span></p>
+                <p class="grid-item"><span>Item 7</span></p>
+                <p class="grid-item"><span>Item 8</span></p>
+                <p class="grid-item"><span>Item 9</span></p>
+                <p class="grid-item"><span>Item 10</span></p>
+                <p class="grid-item"><span>Item 11</span></p>
+                <p class="grid-item"><span>Item 12</span></p>
+                <p class="grid-item"><span>Item 13</span></p>
+                <p class="grid-item"><span>Item 14</span></p>
+                <p class="grid-item"><span>Item 15</span></p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Minmax, auto-fill, auto-fit</h2>
+            <h3>Minmax.</h3>
+            <p>La función minmax permite especificar un máximo y un mínimo para una fila o columna</p>
+            <p>En este caso, la segunda columna tendrá un tamño de 500px, siempre que quepa en la página. Si no cabe, se
+                reducirá hasta un mínimo de 300px, nunca será menor.</p>
+
+            <pre><code class="language-css">display: grid;
+            grid-template-columns: 300px minmax(300px, 500px) 1fr;</code></pre>
+            <div class="grid-container grid-12">
+                <p class="grid-item"><span>Item 1</span></p>
+                <p class="grid-item"><span>Item 2</span></p>
+                <p class="grid-item"><span>Item 3</span></p>
+                <p class="grid-item"><span>Item 4</span></p>
+                <p class="grid-item"><span>Item 5</span></p>
+                <p class="grid-item"><span>Item 6</span></p>
+                <p class="grid-item"><span>Item 7</span></p>
+                <p class="grid-item"><span>Item 8</span></p>
+            </div>
+
+            <h3>repeat() + auto-fill</h3>
+            <p>Si se usa auto-fill con repeat, se rellenará el espacio disponible con celdas, y se irá ajustando a
+                medida que se estreche el espacio. </p>
+            <pre><code class="language-css">display: grid;
+            grid-template-columns: 200px repeat(auto-fill, minmax(200px, 1fr));</code></pre>
+            <div class="grid-container grid-13">
+                <p class="grid-item"><span>Item 1</span></p>
+                <p class="grid-item"><span>Item 2</span></p>
+                <p class="grid-item"><span>Item 3</span></p>
+                <p class="grid-item"><span>Item 4</span></p>
+                <p class="grid-item"><span>Item 5</span></p>
+                <p class="grid-item"><span>Item 6</span></p>
+                <p class="grid-item"><span>Item 7</span></p>
+                <p class="grid-item"><span>Item 8</span></p>
+                <p class="grid-item"><span>Item 9</span></p>
+                <p class="grid-item"><span>Item 10</span></p>
+                <p class="grid-item"><span>Item 11</span></p>
+                <p class="grid-item"><span>Item 12</span></p>
+                <p class="grid-item"><span>Item 13</span></p>
+                <p class="grid-item"><span>Item 14</span></p>
+                <p class="grid-item"><span>Item 15</span></p>
+            </div>
+            <p>Y si no hay suficientes elementos:</p>
+            <div class="grid-container grid-13">
+                <p class="grid-item"><span>Item 1</span></p>
+                <p class="grid-item"><span>Item 2</span></p>
+                <p class="grid-item"><span>Item 3</span></p>
+                <p class="grid-item"><span>Item 4</span></p>
+            </div>
+
+
+            <h3>repeat() + auto-fit</h3>
+            <p>Si se usa auto-fill con repeat, se rellenará el espacio disponible con celdas, y se irá ajustando a
+                medida que se estreche el espacio. </p>
+
+            <pre><code class="language-css">display: grid;
+                        grid-template-columns: 200px repeat(auto-fit, minmax(200px, 1fr));</code></pre>
+            <div class="grid-container grid-14">
+                <p class="grid-item"><span>Item 1</span></p>
+                <p class="grid-item"><span>Item 2</span></p>
+                <p class="grid-item"><span>Item 3</span></p>
+                <p class="grid-item"><span>Item 4</span></p>
+                <p class="grid-item"><span>Item 5</span></p>
+                <p class="grid-item"><span>Item 6</span></p>
+                <p class="grid-item"><span>Item 7</span></p>
+                <p class="grid-item"><span>Item 8</span></p>
+                <p class="grid-item"><span>Item 9</span></p>
+                <p class="grid-item"><span>Item 10</span></p>
+                <p class="grid-item"><span>Item 11</span></p>
+                <p class="grid-item"><span>Item 12</span></p>
+                <p class="grid-item"><span>Item 13</span></p>
+                <p class="grid-item"><span>Item 14</span></p>
+                <p class="grid-item"><span>Item 15</span></p>
+            </div>
+            <p>Y si no hay suficientes elementos:</p>
+            <div class="grid-container grid-14">
+                <p class="grid-item"><span>Item 1</span></p>
+                <p class="grid-item"><span>Item 2</span></p>
+                <p class="grid-item"><span>Item 3</span></p>
+                <p class="grid-item"><span>Item 4</span></p>
+            </div>
+        </section>
+
+
+        <section>
+            <h2>Espaciado / gutters</h2>
+
+            <h3>row-gap y column-gap</h3>
+            <p>Define el espacio de separación entre las celdas del grid, horizontal / verticalmente respectivamente.
+            </p>
+            <p>Ojo, el espaciado es interior, no exterior, por eso está pegado el grid al elemento anterior, que
+                contiene el código CSS</p>
+
+            <pre><code class="language-css">display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: 1fr;
+            grid-auto-rows: 1fr;
+            row-gap: 10px;
+            column-gap: 50px;</code></pre>
+            <div class="grid-container grid-15">
+                <p class="grid-item"><span>Item 1</span></p>
+                <p class="grid-item"><span>Item 2</span></p>
+                <p class="grid-item"><span>Item 3</span></p>
+                <p class="grid-item"><span>Item 4</span></p>
+                <p class="grid-item"><span>Item 5</span></p>
+                <p class="grid-item"><span>Item 6</span></p>
+                <p class="grid-item"><span>Item 7</span></p>
+                <p class="grid-item"><span>Item 8</span></p>
+                <p class="grid-item"><span>Item 9</span></p>
+                <p class="grid-item"><span>Item 10</span></p>
+                <p class="grid-item"><span>Item 11</span></p>
+                <p class="grid-item"><span>Item 12</span></p>
+                <p class="grid-item"><span>Item 13</span></p>
+                <p class="grid-item"><span>Item 14</span></p>
+                <p class="grid-item"><span>Item 15</span></p>
+            </div>
+            <h3>gap</h3>
+            <p>Abreviatura para las dos anteriores. Puede tener un solo valor o dos. Si sólo tiene uno, aplica a fila y
+                columna. Si tiene dos, aplica el primero a fila y el segundo a columna.</p>
+
+            <pre><code class="language-css">display: grid;
+                        grid-template-columns: repeat(5, 1fr);
+                        grid-template-rows: 1fr;
+                        grid-auto-rows: 1fr;
+                        gap: 20px;</code></pre>
+            <div class="grid-container grid-16">
+                <p class="grid-item"><span>Item 1</span></p>
+                <p class="grid-item"><span>Item 2</span></p>
+                <p class="grid-item"><span>Item 3</span></p>
+                <p class="grid-item"><span>Item 4</span></p>
+                <p class="grid-item"><span>Item 5</span></p>
+                <p class="grid-item"><span>Item 6</span></p>
+                <p class="grid-item"><span>Item 7</span></p>
+                <p class="grid-item"><span>Item 8</span></p>
+                <p class="grid-item"><span>Item 9</span></p>
+                <p class="grid-item"><span>Item 10</span></p>
+                <p class="grid-item"><span>Item 11</span></p>
+                <p class="grid-item"><span>Item 12</span></p>
+                <p class="grid-item"><span>Item 13</span></p>
+                <p class="grid-item"><span>Item 14</span></p>
+                <p class="grid-item"><span>Item 15</span></p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Ubicación de elementos</h2>
+            <p>En todos los ejemplos anteriores cada item ocupa un elemento en la rejilla, pero grid permite ubicar los
+                items en posiciones concretas, que ocupen más de una celda, o incluso solapar celdas.</p>
+            <p>Es importante entender que, cuando indicamos inicio y fin de un elemento en grid, no nos referimos a los
+                huecos o celdas, sino a las líneas.</p>
+            <p>Un grid de 5 columnas y 4 filas tendrá 6 líneas de grid verticales (de la 1 a la 6) y 5 horizontales (de
+                la 1 a la 5)</p>
+            <p>Todos los ejemplos de esta sección serán con un grid con la siguiente estructura:</p>
+            <pre><code class="language-css">display: grid;
+            grid-template-columns: repeat(5, 1fr);</code></pre>
+            <p>Y trabajaremos con los elementos</p>
+
+            <h3>Elemento que ocupa varias celdas en horizontal</h3>
+            <p>Se usan las propiedades grid-column-start y grid-column-end</p>
+            <p>Ojo, estas propiedades referencian números de línea, no celdas.</p>
+            <pre><code class="language-css">/* Item 1 */
+            grid-column-start: 1;
+            grid-column-end: 3;
+            /* Item 7 */
+            grid-column-start: 3;
+            grid-column-end: 6;</code></pre>
+            <div class="grid-container grid-ubicacion">
+                <p class="grid-item item-a-1"><span>Item 1</span></p>
+                <p class="grid-item"><span>Item 2</span></p>
+                <p class="grid-item"><span>Item 3</span></p>
+                <p class="grid-item"><span>Item 4</span></p>
+                <p class="grid-item"><span>Item 5</span></p>
+                <p class="grid-item"><span>Item 6</span></p>
+                <p class="grid-item item-a-2"><span>Item 7</span></p>
+                <p class="grid-item"><span>Item 8</span></p>
+                <p class="grid-item"><span>Item 9</span></p>
+                <p class="grid-item"><span>Item 10</span></p>
+                <p class="grid-item"><span>Item 11</span></p>
+                <p class="grid-item"><span>Item 12</span></p>
+                <p class="grid-item"><span>Item 13</span></p>
+                <p class="grid-item"><span>Item 14</span></p>
+                <p class="grid-item"><span>Item 15</span></p>
+                <p class="grid-item"><span>Item 16</span></p>
+                <p class="grid-item"><span>Item 17</span></p>
+                <p class="grid-item"><span>Item 18</span></p>
+                <p class="grid-item"><span>Item 19</span></p>
+                <p class="grid-item"><span>Item 20</span></p>
+            </div>
+
+            <h3>Elemento que ocupa varias celdas en vertical</h3>
+            <p>Se usan las propiedades grid-row-start y grid-row-end</p>
+            <p> En este caso, además hemos usado "span n" en la propiedad end, para que abarque n celdas.</p>
+            <p>En este caso vemos que se "desordenan" los elementos, los coloca según el espacio disponible.</p>
+            <pre><code class="language-css">/* Item 1 */
+            grid-row-start: 1;
+            grid-row-end: 3;
+            /* Item 8 */
+            grid-row-start: 3;
+            grid-row-end: span 2;</code></pre>
+            <div class="grid-container grid-ubicacion">
+                <p class="grid-item item-b-1"><span>Item 1</span></p>
+                <p class="grid-item"><span>Item 2</span></p>
+                <p class="grid-item"><span>Item 3</span></p>
+                <p class="grid-item"><span>Item 4</span></p>
+                <p class="grid-item"><span>Item 5</span></p>
+                <p class="grid-item"><span>Item 6</span></p>
+                <p class="grid-item"><span>Item 7</span></p>
+                <p class="grid-item item-b-2"><span>Item 8</span></p>
+                <p class="grid-item"><span>Item 9</span></p>
+                <p class="grid-item"><span>Item 10</span></p>
+                <p class="grid-item"><span>Item 11</span></p>
+                <p class="grid-item"><span>Item 12</span></p>
+                <p class="grid-item"><span>Item 13</span></p>
+                <p class="grid-item"><span>Item 14</span></p>
+                <p class="grid-item"><span>Item 15</span></p>
+                <p class="grid-item"><span>Item 16</span></p>
+                <p class="grid-item"><span>Item 17</span></p>
+                <p class="grid-item"><span>Item 18</span></p>
+                <p class="grid-item"><span>Item 19</span></p>
+                <p class="grid-item"><span>Item 20</span></p>
+            </div>
+
+            <h3>Elemento que ocupa varias celdas en ambas direcciones</h3>
+            <p>Se usan todas las propiedades </p>
+            <p>Se recoloca el elemento, sacándolo del flujo habitual, para que encaje en esas celdas</p>
+            <pre><code class="language-css">grid-column-start: 2;
+            grid-column-end: span 2;
+            grid-row-start: 3;
+            grid-row-end: span 2;</code></pre>
+            <div class="grid-container grid-ubicacion">
+                <p class="grid-item"><span>Item 1</span></p>
+                <p class="grid-item"><span>Item 2</span></p>
+                <p class="grid-item"><span>Item 3</span></p>
+                <p class="grid-item"><span>Item 4</span></p>
+                <p class="grid-item"><span>Item 5</span></p>
+                <p class="grid-item"><span>Item 6</span></p>
+                <p class="grid-item item-c"><span>Item 7</span></p>
+                <p class="grid-item"><span>Item 8</span></p>
+                <p class="grid-item"><span>Item 9</span></p>
+                <p class="grid-item"><span>Item 10</span></p>
+                <p class="grid-item"><span>Item 11</span></p>
+                <p class="grid-item"><span>Item 12</span></p>
+                <p class="grid-item"><span>Item 13</span></p>
+                <p class="grid-item"><span>Item 14</span></p>
+                <p class="grid-item"><span>Item 15</span></p>
+                <p class="grid-item"><span>Item 16</span></p>
+                <p class="grid-item"><span>Item 17</span></p>
+                <p class="grid-item"><span>Item 18</span></p>
+                <p class="grid-item"><span>Item 19</span></p>
+                <p class="grid-item"><span>Item 20</span></p>
+            </div>
+
+            <h3>Usando valores de línea negativos</h3>
+            <p>Para estas propiedades, podemos usar números negativos.</p>
+            <p>En la rejilla, las líneas se numeran de 1 hasta (nº de columnas/filas)+1 en el sentido de lectura, y de
+                -1 a -((nº de columnas/filas)+1) desde el final en sentido contrario.</p>
+            <p><img src="grid-lines.png" alt="" class="img-grid-lines"></p>
+            <pre><code class="language-css">/* item 1*/
+            grid-column-start: 3;
+            grid-column-end: -2;
+            /* item 8 */
+            grid-column-start: -1;
+            grid-column-end: -5;</code></pre>
+            <div class="grid-container grid-ubicacion">
+                <p class="grid-item item-d-1"><span>Item 1</span></p>
+                <p class="grid-item"><span>Item 2</span></p>
+                <p class="grid-item"><span>Item 3</span></p>
+                <p class="grid-item"><span>Item 4</span></p>
+                <p class="grid-item"><span>Item 5</span></p>
+                <p class="grid-item"><span>Item 6</span></p>
+                <p class="grid-item"><span>Item 7</span></p>
+                <p class="grid-item item-d-2"><span>Item 8</span></p>
+                <p class="grid-item"><span>Item 9</span></p>
+                <p class="grid-item"><span>Item 10</span></p>
+                <p class="grid-item"><span>Item 11</span></p>
+                <p class="grid-item"><span>Item 12</span></p>
+                <p class="grid-item"><span>Item 13</span></p>
+                <p class="grid-item"><span>Item 14</span></p>
+                <p class="grid-item"><span>Item 15</span></p>
+                <p class="grid-item"><span>Item 16</span></p>
+                <p class="grid-item"><span>Item 17</span></p>
+                <p class="grid-item"><span>Item 18</span></p>
+                <p class="grid-item"><span>Item 19</span></p>
+                <p class="grid-item"><span>Item 20</span></p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Grid por áreas</h2>
+            <p>Se usa "grid-template-areas" para definir las áreas y "grid-area" para indicar en qué área de las
+                definidas se ubica un contenido</p>
+            <p>Hay que definir también, al menos, el ancho de las columnas</p>
+            <h3>Estructura con cabecera, menú izquierdo, contenido, y pie</h3>
+            <p>Se define la estructura en el contenedor grid:</p>
+            <pre><code class="language-css">display: grid;
+            grid-template-areas:
+            "cabecera cabecera"
+            "menu principal"
+            "pie pie";
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: 200px 600px 100px;</code></pre>
+            <p>Y se asigna cada elemento al área correspondiente</p>
+            <pre><code class="language-css">
+            /* Cabecera */
+            grid-area: cabecera;
+            background-color: rgb(247, 140, 140);
+            /* Menu */
+            grid-area: menu;
+            background-color: rgb(195, 255, 255);
+            /* Cuerpo ppal */
+            grid-area: principal;
+            background-color: lightgreen;
+            /* Pie */
+            grid-area: pie;
+            background-color: rgb(221, 171, 255);</code></pre>
+            <div class="grid-areas-pagina">
+                <p class="item-areas item-areas-cabecera"><span>Cabecera</span></p>
+                <p class="item-areas item-areas-menu"><span>Menu</span></p>
+                <p class="item-areas item-areas-main"><span>Contenido ppal</span></p>
+                <p class="item-areas item-areas-pie"><span>Pie</span></p>
+            </div>
+        </section>
+
+
+    </main>
+    <footer>
+        <p>Lenguajes de marcas y sistemas de gestión de la información - IES Clara del Rey</p>
+    </footer>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<agenda>
+    <contacto id="cto001">
+        <nombre>José Luis</nombre>
+        <apellidos>López Álvarez</apellidos>
+        <direccion>
+            <tipoVia>Calle</tipoVia>
+            <nombreVia>Padre Claret</nombreVia>
+            <numeroVia>8</numeroVia>
+            <infoAdicional>Planta 1ª Aula i.2</infoAdicional>
+            <codPostal>28002</codPostal>
+            <poblacion>
+                Madrid
+            </poblacion>
+        </direccion>
+        <telefonos>
+            <telefono tipo="F&quot;">9111111111</telefono>
+            <telefono tipo="C">9111111111</telefono>
+            <telefono tipo='T'>9111111111</telefono>
+        </telefonos>
+    </contacto>
+    <contacto id="cto002">
+        <nombre>Ana</nombre>
+        <apellidos>Massa</apellidos>
+        <direccion>
+            <tipoVia>Avda</tipoVia>
+            <nombreVia>Padre Claret</nombreVia>
+            <numeroVia>8</numeroVia>
+            <infoAdicional>Planta 1ª Aula i.2</infoAdicional>
+            <codPostal>28002</codPostal>
+            <poblacion>
+                Madrid
+            </poblacion>
+        </direccion>
+        <telefono tipo="F&quot;">9111111111</telefono>
+        <telefono tipo="M">9111111111</telefono>
+        <telefono tipo='T'>9111111111</telefono>
+    </contacto>
+    <!-- 
+        Los contactos se repetirían de aquí en adelante
+    -->
+
+</agenda>
