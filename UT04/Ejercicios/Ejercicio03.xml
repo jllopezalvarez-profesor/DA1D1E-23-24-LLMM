@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ciclo xmlns="https://jllopezalvarez.es/ciclo">
+    <nombre>Desarrollo de aplicaciones multiplataforma</nombre>
+    <horasLectivas>2000</horasLectivas>
+    <modulos>
+        <modulo codigo="0485" horas="250">Programación</modulo>
+        <modulo codigo="0484" horas="100">Entronos de desarrollo</modulo>
+        <modulo codigo="0324" horas="100">FOL</modulo>
+    </modulos>
+    <alumnos>
+        <alumno>
+            <documento tipo="NIF" numero="12345678A" />
+            <nombre>José Luis</nombre>
+            <apellidos>López Álvarez</apellidos>
+            <fechaNacimiento>1972-08-13</fechaNacimiento>
+            <mat:modulosMatriculados xmlns:mat="https://jllopezalvarez.es/ciclo/matriculados">
+                <mat:modulo codigo="0485" fecha="2023-09-10" />
+                <mat:modulo codigo="0484" fecha="2023-09-10" />
+            </mat:modulosMatriculados>
+            <conv:modulosConvalidados xmlns:conv="https://jllopezalvarez.es/ciclo/convalidados">
+                <conv:modulo codigo="0324" fecha="2023-09-10" nota="5" />
+            </conv:modulosConvalidados>
+        </alumno>
+
+    </alumnos>
+</ciclo>
