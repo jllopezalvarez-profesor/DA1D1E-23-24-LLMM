@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recetas>
+    <receta num='1'>
+        <nombre>Sopa de cebolla</nombre>
+        <numComensales>4</numComensales>
+        <ingrediente orden="1" cantidad="1kg">Cebollas</ingrediente>
+        <ingrediente orden="2" cantidad="1kg">Cebollas</ingrediente>
+        <paso orden="1">Paso 1</paso>
+        <paso orden="2">Paso 2</paso>
+    </receta>
+</recetas>
